@@ -1,0 +1,1983 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+		<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+			<head>
+<title>
+			notar.de - Suchergebnis
+</title>
+
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Die Notarauskunft der Bundesnotarkammer" />
+
+	<meta name="keywords" content="Notarauskunft, Notarsuche, Urkundensuche, Gerichtssuche, Grundbuchamtssuche" />
+
+	<link rel="shortcut icon" href="/101000/designs/notar_de/images/favicon.ico" />
+	
+	<link href="/101000/base-design/global/css/modal.css" rel="stylesheet" type="text/css"/>
+	<!--[if IE]>
+	    <link href="/101000/base-design/global/css/ie_all.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	<!--[if IE 7]>
+	    <link href="/101000/designs/notar_de/css/ie7.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	<!-- input css for all sides -->
+	<link href="/101000/designs/notar_de/css/content.css" rel="stylesheet" type="text/css" />
+	<link href="/101000/designs/notar_de/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="/101000/designs/notar_de/css/print.css" rel="stylesheet" type="text/css" media="print" />
+	
+	<!-- input code for all sides -->
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBsCO-_9OxKKd6f49HJxrJYOyATp4VV-Pw&libraries=places"></script>
+	<script type="text/javascript" src="/101000/base-design/global/js/thirdparty/jquery-1.7.1.min.js"></script>
+
+	<link rel="stylesheet" href="/101000/base-design/global/js/thirdparty/jquery-autocomplete/jquery.autocomplete.css" type="text/css" />
+	<script type="text/javascript" src="/101000/base-design/global/js/thirdparty/jquery-autocomplete/lib/jquery.bgiframe.min.js"></script>
+	<script type="text/javascript" src="/101000/base-design/global/js/thirdparty/jquery-autocomplete/jquery.autocomplete.js"></script>
+	
+	<!-- include mediaplayer plugin -->
+	<script type="text/javascript" src="/101000/base-design/global/js/mediaplayer/swfobject.js"></script>
+	
+	<!-- include datepicker -->
+	<link rel="stylesheet" href="/101000/base-design/global/js/thirdparty/datepicker/css/datepicker.css" type="text/css" />
+	<script type="text/javascript" src="/101000/base-design/global/js/thirdparty/datepicker/js/datepicker.js"></script>
+	
+	<!-- include highslide plugin -->
+	<script type="text/javascript" src="/101000/base-design/global/js/thirdparty/highslide/highslide-full.js"></script>
+	<script type="text/javascript" src="/101000/designs/notar_de/js/highslide.config.notar_de.js" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="/101000/base-design/global/js/thirdparty/highslide/highslide.css" />
+	
+	<script type="text/javascript">
+		var currentpagelink = 'http://notar.de/suchergebnis';
+	</script>
+	
+	<script type="text/javascript" src="/101000/base-design/global/js/wcmsfunctions/function.js"></script>
+	<script type="text/javascript" src="/101000/base-design/global/js/wcmsfunctions/baseFunctions.js"></script>
+	
+	<script type="text/javascript" src="/101000/designs/notar_de/js/sitefunctions.js"></script>
+	
+		<!-- Piwik -->
+			<script type="text/javascript">
+				document.write(unescape("%3Cscript src='//statistics.bnotk.de/piwik//piwik.js' type='text/javascript'%3E%3C/script%3E"));
+			</script>
+			<script type="text/javascript">
+				try {
+					var piwikTracker = Piwik.getTracker("//statistics.bnotk.de/piwik//piwik.php", 58);
+					piwikTracker.trackPageView();
+					piwikTracker.enableLinkTracking();
+				} catch( err ) {}
+			</script>
+		<!-- End Piwik Tag -->
+	<style type="text/css">
+		.notarde_search .logoLink {
+  background: rgba(0, 0, 0, 0) url("/medien/f7c8a592-52f9-4dba-8ce7-f0f769ec698b/logo_bnotk.png") repeat scroll 0 0;
+  top: 52px;
+  width: 220px;
+  height: 24px;
+}
+
+.logoLink {
+  background: rgba(0, 0, 0, 0) url("/medien/f7c8a592-52f9-4dba-8ce7-f0f769ec698b/logo_bnotk.png") repeat scroll 0 0;
+  top: 44px;
+  width: 220px;
+  height: 24px;
+}
+	</style>
+	<script type="text/javascript">
+		
+	</script>
+	<script id="pagetemplatecommon" type="text/javascript"></script>
+	<script id="directexplorercomponents" type="text/javascript"></script>
+	<script id="dialogsplaceholder" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+			$(document).ready(function() {
+			    //Tooltips
+			    tip = null;
+			    $(".paragraphkey").hover(function(){
+			    	var currentId = this.id;
+					if(document.getElementById('paragraphtext_' + currentId) != null){
+						tip = $(this).find('.tooltiptext');
+						tip.show(); //Show tooltip
+					} else {
+						var spanId = currentId.substring(15,this.id.length);
+						if(document.getElementById('paragraphtextloading_' + currentId) == null){
+							$("#" + currentId).append("<span class='tooltiptext waiting' id='paragraphtextloading_" + currentId +"'><img src='/101000/designs/notar_de/images/loading.gif' /><p>Lade</p></span>").ready(function(){
+									tip = $("#" + currentId).find('.tooltiptext');
+									tip.show(); //Show tooltip
+								}
+							);
+						}
+						var ajaxLink = 'http://notar.de/suchergebnis?ajax=true&ajaxtype=clause&site-id=' + 102009 + '&id=' + spanId;
+						if("http://notar.de/suchergebnis".indexOf("?") >= 0){
+							ajaxLink = 'http://notar.de/suchergebnis&ajax=true&ajaxtype=clause&site-id=' + 102009 + '&id=' + spanId;
+						}
+						$.get(ajaxLink, function(data) {
+							$("#paragraphtextloading_" + currentId).remove();
+							$("#" + currentId).append("<span class='tooltiptext' id='paragraphtext_" + currentId +"'>" + data + "</span>").ready(function(){
+									tip = $("#" + currentId).find('.tooltiptext');
+									tip.show(); //Show tooltip
+								}
+							);
+							
+						}, 'html');
+					}
+			        
+			    }, function() {
+			    	if(tip)
+				        tip.hide(); //Hide tooltip
+			    }).mousemove(function(e) {
+			    	var currentId = this.id;
+			    	if(tip && document.getElementById('paragraphtext_' + currentId) != null){
+				        var mousex = e.pageX + 20; //Get X coodrinates
+				        var mousey = e.pageY + 20; //Get Y coordinates
+				        var tipWidth = tip.width(); //Find width of tooltip
+				        var tipHeight = tip.height(); //Find height of tooltip
+				
+				        //Distance of element from the right edge of viewport
+				        var tipVisX = $(window).width() - (mousex + tipWidth);
+				        //Distance of element from the bottom of viewport
+				        var tipVisY = $(window).height() - (mousey + tipHeight);
+				
+				        if ( tipVisX < 20 ) { //If tooltip exceeds the X coordinate of viewport
+				            mousex = e.pageX - tipWidth - 20;
+				        } if ( tipVisY < 20 ) { //If tooltip exceeds the Y coordinate of viewport
+				            mousey = e.pageY - tipHeight - 20;
+				        }
+				        //Absolute position the tooltip according to mouse position
+				        tip.css({  top: mousey, left: mousex });
+					}
+			    });
+			    
+			    $(".glossarykey").hover(function(){
+			    	var currentId = this.id;
+					if(document.getElementById('glossarytext_' + currentId) != null){
+						tip = $(this).find('.tooltiptext');
+						tip.show(); //Show tooltip
+					} else {
+						var spanId = currentId.substring(14,this.id.length);
+						if(document.getElementById('glossarytextloading_' + currentId) == null){
+							$("#" + currentId).append("<span class='tooltiptext waiting' id='glossarytextloading_" + currentId +"'><img src='/101000/designs/notar_de/images/loading.gif' /><p>Lade</p></span>").ready(function(){
+									tip = $("#" + currentId).find('.tooltiptext');
+									tip.show(); //Show tooltip
+								}
+							);
+						}
+						var ajaxLink = 'http://notar.de/suchergebnis?ajax=true&ajaxtype=ajaxglossary&fullview=true&site-id=' + 102009 + '&id=' + spanId;
+						if("http://notar.de/suchergebnis".indexOf("?") >= 0){
+							ajaxLink = 'http://notar.de/suchergebnis&ajax=true&ajaxtype=ajaxglossary&fullview=true&site-id=' + 102009 + '&id=' + spanId;
+						}
+						$.get(ajaxLink, function(data) {
+							$("#glossarytextloading_" + currentId).remove();
+							$("#" + currentId).append("<span class='tooltiptext' id='glossarytext_" + currentId +"'>" + data + "</span>").ready(function(){
+									tip = $("#" + currentId).find('.tooltiptext');
+									tip.show(); //Show tooltip
+								}
+							);
+							
+						}, 'html');
+					}
+			        
+			    }, function() {
+			    	if(tip)
+				        tip.hide(); //Hide tooltip
+			    }).mousemove(function(e) {
+			    	var currentId = this.id;
+			    	if(tip && document.getElementById('glossarytext_' + currentId) != null){
+				        var mousex = e.pageX + 20; //Get X coodrinates
+				        var mousey = e.pageY + 20; //Get Y coordinates
+				        var tipWidth = tip.width(); //Find width of tooltip
+				        var tipHeight = tip.height(); //Find height of tooltip
+				
+				        //Distance of element from the right edge of viewport
+				        var tipVisX = $(window).width() - (mousex + tipWidth);
+				        //Distance of element from the bottom of viewport
+				        var tipVisY = $(window).height() - (mousey + tipHeight);
+				
+				        if ( tipVisX < 20 ) { //If tooltip exceeds the X coordinate of viewport
+				            mousex = e.pageX - tipWidth - 20;
+				        } if ( tipVisY < 20 ) { //If tooltip exceeds the Y coordinate of viewport
+				            mousey = e.pageY - tipHeight - 20;
+				        }
+				        //Absolute position the tooltip according to mouse position
+				        tip.css({  top: mousey, left: mousex });
+					}
+			    });
+			    
+			});
+	</script>
+			</head>
+			<body class="bt-6 notarde notarde_search">
+				<div class="wrapper">
+					<div id="header">
+<div class="headerLanguageLinks">
+	<span class="printIcon" onclick="window.print();">&nbsp;</span> | <a href="http://notar.de/">HOME</a> <!-- |
+		<a href="http://notar.de/de" class="active">de</a>
+			 |
+		<a href="http://notar.de/en" class="">en</a>
+			 |
+		<a href="http://notar.de/fr" class="">fr</a>
+			 |
+		<a href="http://notar.de/es" class="">es</a>
+	-->
+</div>
+<a class="logoLink" href="http://www.bnotk.de" target="_blank" title="Bundesnotarkammer"></a>	<div class="headerSearch">
+		<div class="searchNav">
+					<div id="searchNavButton_notar" class="searchNavButton buttonFirst blueButton">
+						<div class="buttonBody">
+							<div class="buttonLeft"></div>
+							<div class="buttonRight"></div>
+							<div class="arrowGrey"></div>
+							<div class="arrowWhite"></div>
+							<div class="buttonCenter" onclick="notardeSearchForm.switchSearchForm('notar');">Notarsuche</div>
+						</div>
+					</div>
+					<div id="searchNavButton_urkunden" class="searchNavButton">
+						<div class="buttonBody">
+							<div class="buttonLeft"></div>
+							<div class="buttonRight"></div>
+							<div class="arrowGrey"></div>
+							<div class="arrowWhite"></div>
+							<div class="buttonCenter" onclick="notardeSearchForm.switchSearchForm('urkunden');">Urkundensuche</div>
+						</div>
+					</div>
+					<div id="searchNavButton_gerichts" class="searchNavButton">
+						<div class="buttonBody">
+							<div class="buttonLeft"></div>
+							<div class="buttonRight"></div>
+							<div class="arrowGrey"></div>
+							<div class="arrowWhite"></div>
+							<div class="buttonCenter" onclick="notardeSearchForm.switchSearchForm('gerichts');">Gerichtssuche</div>
+						</div>
+					</div>
+					<div id="searchNavButton_grundbuch" class="searchNavButton">
+						<div class="buttonBody">
+							<div class="buttonLeft"></div>
+							<div class="buttonRight"></div>
+							<div class="arrowGrey"></div>
+							<div class="arrowWhite"></div>
+							<div class="buttonCenter" onclick="notardeSearchForm.switchSearchForm('grundbuch');">Grundbuchamtssuche</div>
+						</div>
+					</div>
+					<div id="searchNavButton_standesamt" class="searchNavButton">
+						<div class="buttonBody">
+							<div class="buttonLeft"></div>
+							<div class="buttonRight"></div>
+							<div class="arrowGrey"></div>
+							<div class="arrowWhite"></div>
+							<div class="buttonCenter" onclick="notardeSearchForm.switchSearchForm('standesamt');">Standesamtssuche</div>
+						</div>
+					</div>
+		</div>
+				<div id="formContainer_notar" class="activeSearchLayout">
+<div class="searchControlsArea">
+	<div class="searchBoxArea">
+		<div class="searchBoxTop"></div>
+		<div class="searchBoxTopLeft"></div>
+		<div class="searchBoxTopRight"></div>
+		<div class="searchBoxBottom"></div>
+		<div class="searchBoxBottomLeft"></div>
+		<div class="searchBoxBottomRight"></div>
+		<div class="searchBoxLeft"></div>
+		<div class="searchBoxRight"></div>
+		<div class="searchBoxBg"></div>
+		<div class="searchBoxContent">
+			<h3 class="searchBoxTitle">Einen Notar in Ihrer Nähe können Sie hier finden.</h3>
+			<form id="notarde_search_notar_form" action="/suchergebnis" method="GET">
+				<div class="tab_container">
+					<ul class="tabs">
+					    <li class=" activeFolder" rel="tab1"><a>Notarsuche</a></li>
+					    <li class="" rel="tab2"><a>Umkreissuche</a></li>
+				  	</ul>
+				  	<input type="hidden" id="search_type_" value="default" name="searchType">
+					<div class="tab" id="tab1" data-search-type="default" >
+					<table>
+						<tbody>
+							<tr>
+								<td>
+									<div class="inputWrapper">
+										<input type="text" id="name_notar" name="name" value="Aalen" __default="Name ..." onfocus="wcmsUtils.handleDefaultValue(this);" onblur="wcmsUtils.handleDefaultValue(this, true);"/>
+									</div>
+								</td>
+								<td>
+									<div class="inputWrapper">
+										<div class="additionalValue" id="zip_notar_display"></div>
+										<input type="hidden" name="active_search" value="notar"/>
+										<input type="hidden" id="city_notar_id" name="city_id" value=""/>
+										<input type="hidden" id="zip_notar" name="zip" value=""/>
+										<input type="text" id="city_notar" name="city" value="Ort ..." __default="Ort ..." __resetOnEmpty="city_notar" onfocus="wcmsUtils.handleDefaultValue(this);" onchange="if(this.cityTitle != this.value){$('#zip_notar').val('');$('#city_notar_id').val('');$('#zip_notar_display').html('');}" onblur="wcmsUtils.handleDefaultValue(this, true);"/>
+									</div>
+								</td>
+								<td>
+									<div id="region_notar" class="inputWrapper selectWrapper">
+										<div class="inputSelect">
+											<span class="selectDisplay">Kammerbezirk ...</span>
+											<div class="selectTrigger"></div>
+										</div>
+										<input type="hidden" name="region_id" value="">
+										<div class="selectList">
+											<div class="selectEntry default">
+												<div class="title">Kammerbezirk ...</div>
+												<div class="display">Bitte auswählen</div>
+												<div class="value"></div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="inputWrapper selectWrapper">
+										<div class="inputSelect">
+											<span class="selectDisplay">Sprachen ...</span>
+											<div class="selectTrigger"></div>
+										</div>
+										<input type="hidden" name="sprachen" value="">
+										<div class="selectList">
+											<div class="selectEntry default">
+												<div class="title">Sprachen ...</div>
+												<div class="display">Bitte auswählen</div>
+												<div class="value"></div>
+											</div>
+													<div class="selectEntry">
+														<div class="display">Ungarisch</div>
+														<div class="value">HUN</div>
+													</div>
+													<div class="selectEntry">
+														<div class="display">Kroatisch</div>
+														<div class="value">CRO</div>
+													</div>
+													<div class="selectEntry">
+														<div class="display">Schwedisch</div>
+														<div class="value">SV</div>
+													</div>
+													<div class="selectEntry">
+														<div class="display">Finnisch</div>
+														<div class="value">FI</div>
+													</div>
+													<div class="selectEntry">
+														<div class="display">Portugiesisch</div>
+														<div class="value">PT</div>
+													</div>
+													<div class="selectEntry">
+														<div class="display">Griechisch</div>
+														<div class="value">EL</div>
+													</div>
+													<div class="selectEntry">
+														<div class="display">Dänisch</div>
+														<div class="value">DK</div>
+													</div>
+													<div class="selectEntry">
+														<div class="display">Englisch</div>
+														<div class="value">EN</div>
+													</div>
+													<div class="selectEntry">
+														<div class="display">Türkisch</div>
+														<div class="value">TUK</div>
+													</div>
+													<div class="selectEntry">
+														<div class="display">Italienisch</div>
+														<div class="value">IT</div>
+													</div>
+													<div class="selectEntry">
+														<div class="display">Französisch</div>
+														<div class="value">FR</div>
+													</div>
+													<div class="selectEntry">
+														<div class="display">Spanisch</div>
+														<div class="value">ES</div>
+													</div>
+													<div class="selectEntry">
+														<div class="display">Norwegisch</div>
+														<div class="value">NOR</div>
+													</div>
+													<div class="selectEntry">
+														<div class="display">Russisch</div>
+														<div class="value">RUS</div>
+													</div>
+													<div class="selectEntry">
+														<div class="display">Dt. Gebärdensprache</div>
+														<div class="value">DGS</div>
+													</div>
+													<div class="selectEntry">
+														<div class="display">Japanisch</div>
+														<div class="value">JAP</div>
+													</div>
+													<div class="selectEntry">
+														<div class="display">Persisch</div>
+														<div class="value">PER</div>
+													</div>
+													<div class="selectEntry">
+														<div class="display">Polnisch</div>
+														<div class="value">PL</div>
+													</div>
+													<div class="selectEntry">
+														<div class="display">Niederländisch</div>
+														<div class="value">NL</div>
+													</div>
+										</div>
+									</div>
+								</td>
+								<td class="lastCell">
+									<div class="searchBoxSubmit" onclick="searchFormSubmit('notarde_search_notar_form');">
+										Suchen<div class="arrowWhite"></div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					</div>
+					<div class="tab" id="tab2" data-search-type="geo" style="display:none;">
+						<div id="results" class="pac-container" style="position: absolute; top: 86px; left: 200px; width: 233px;"></div>
+						<table>
+							<tbody>
+								<tr>
+									<td>
+										<div class="inputWrapper">
+											<input type="hidden" id="lat_geo" name="lat_geo" value=""/>
+											<input type="hidden" id="lon_geo" name="lon_geo" value=""/>
+											<input type="text" id="city_notar_geo" name="city" __default="Ort und PLZ ..." value="" onfocus="wcmsUtils.handleDefaultValue(this);" onchange="if(this.cityTitle != this.value){$('#zip_notar_geo').val('');$('#city_notar_id_geo').val('');$('#street__geo').val('');$('#lon_geo').val('');$('#lat_geo').val('');$('#street__geo').attr('ac_selected','false');}" onblur="wcmsUtils.handleDefaultValue(this, true);" class="ac_input"/>
+										</div>
+									</td>
+									<td>
+										<div class="inputWrapper">
+											<input type="text" autocomplete="off" onblur="wcmsUtils.handleDefaultValue(this, true);" onfocus="wcmsUtils.handleDefaultValue(this);" value="Straße ..." __default="Straße ..." name="street" id="street__geo" class="ac_input" >
+										</div>
+									</td>
+									<td>
+										<div class="inputWrapper selectWrapper">
+											<div class="inputSelect">
+												<span class="selectDisplay">Suchradius</span>
+												<div class="selectTrigger"></div>
+											</div>
+											<input type="hidden" value="Suchradius ..." name="radius" id="radius_" __default="Suchradius ...">
+											<div class="selectList">
+												<div class="selectEntry default">
+													<div class="title">Suchradius</div>
+													<div class="display">Bitte auswählen</div>
+													<div class="value"></div>
+												</div>
+												<div class="selectEntry">
+													<div class="display">1 km</div>
+													<div class="value">1</div>
+												</div>
+												<div class="selectEntry">
+													<div class="display">5 km</div>
+													<div class="value">5</div>
+												</div>
+												<div class="selectEntry">
+													<div class="display">10 km</div>
+													<div class="value">10</div>
+												</div>
+												<div class="selectEntry">
+													<div class="display">15 km</div>
+													<div class="value">15</div>
+												</div>
+												<div class="selectEntry">
+													<div class="display">20 km</div>
+													<div class="value">20</div>
+												</div>
+												<div class="selectEntry">
+													<div class="display">25 km</div>
+													<div class="value">25</div>
+												</div>
+												<div class="selectEntry">
+													<div class="display">50 km</div>
+													<div class="value">50</div>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td class="lastCell">
+										<div class="searchBoxSubmit searchBoxSubmit_notar">
+											Suchen<div class="arrowWhite"></div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</form>
+			<div class="geo_message searchBoxDescription" style="display:none; margin-top: 14px;"></div>
+			<div class="no_results_found no_results_notar mceContentBody">
+Mit den aktuellen Suchkriterien konnten keine Ergebnisse gefunden werden. Um einen Notar in Ihrer Umgebung zu finden, führen Sie bitte die <a href="#" onclick="$('.tabs li[rel=\'tab2\']').trigger('click');$('.no_results_found').hide();return false;">Umkreissuche</a> durch. Hierzu geben Sie bitte eine genaue Adresse in diesem Ort ein.			</div>
+			<h3 class="searchBoxFooter">Hinweis: Ehemalige Notare finden Sie über die Urkundensuche.</h3>
+			<div id="map-canvas" style="display:none;"></div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+		notardeSearchForm.setActiveForm('notar');
+	insertSelectOptions({
+		selector: '#region_notar',
+		options: notardeSearchForm.regionsAutocomplete("notar"),
+		onSelectCallback: function(name, id){
+			notardeSearchForm.selectRegionOnMap(name, 'notar');
+		}
+	});
+	$(document).ready(function(){
+		$("#city_notar").autocomplete("/index.html?ajax=true&ajaxtype=autocomplete_service&type=city_multi_search", {
+			minChars: 3,
+			selectFirst: false,
+			dataType: "text",
+			requestType: "POST",
+			formatResult: function(val){
+				return val;
+			},
+			highlight: function(value, term) {
+				return value.replace(new RegExp("(?![^&;]+;)(?!<[^<>]*)(" + term.trim().replace(/([\^\$\(\)\[\]\{\}\*\.\+\?\|\\])/gi, "\\$1") + ")(?![^<>]*>)(?![^&;]+;)", "gi"), "<strong>$1</strong>");
+			},
+			formatItem: function(val){
+				if(val[1] && "null" != val[1]){
+					return val[0] +  " - " + val[1];
+				}
+				else {
+					return val[0];
+				}
+			},
+			onSelectCallback : function(val){
+				$("#city_notar").attr('value', val[0]);
+				$("#city_notar")[0].cityTitle = val[0];
+				if(val[1]){
+					$("#zip_notar").val(val[1]);
+					$("#zip_notar_display").html('PLZ: ' + val[1]);
+				}
+				else {
+					$("#zip_notar").val('');
+					$("#zip_notar_display").html('');
+				}
+				if(val[2]){
+					$("#city_notar_id").val(val[2]);
+				}
+				else {
+					$("#city_notar_id").val('');
+				}
+			},
+			className: 'headerSearchAutoComplete',
+			noCache: true
+		});
+		$("#city_notar_geo").autocomplete("/index.html?ajax=true&ajaxtype=autocomplete_service&type=jurisdiction_city", {
+			minChars: 3,
+			max: 350,
+			selectFirst: false,
+			dataType: "text",
+			requestType: "POST",
+			formatResult: function(val){
+				return val;
+			},
+			highlight: function(value, term) {
+				return value.replace(new RegExp("(?![^&;]+;)(?!<[^<>]*)(" + term.trim().replace(/([\^\$\(\)\[\]\{\}\*\.\+\?\|\\])/gi, "\\$1") + ")(?![^<>]*>)(?![^&;]+;)", "gi"), "<strong>$1</strong>");
+			},
+			formatItem: function(val){
+				if(val[1] && "null" != val[1]){
+					return val[0] +  " - " + val[1];
+				}
+				else {
+					return val[0];
+				}
+			},
+			onSelectCallback : function(val){
+				$("#city_notar_geo").attr('value', val[0]);
+				$("#city_notar_geo")[0].cityTitle = val[0];
+				$("#city_notar")[0].cityTitle = val[0];
+				
+				$("#city_notar_geo").val(val[0]);
+				$("#city_notar").val(val[0]);
+				
+				if(val[1]){
+					$("#zip_notar").val(val[1]);
+					$("#zip_notar_display").html('PLZ: ' + val[1]);
+				}
+				else {
+					$("#zip_notar").val('');
+					$("#zip_notar_display").html('');
+				}
+				if(val[2]){
+					$("#city_notar_id").val(val[2]);
+				}
+				else {
+					$("#city_notar_id").val('');
+				}
+				geoSearchByCity();
+			},
+			noCache: true
+		});
+		$("#name_notar").autocomplete("/index.html?ajax=true&ajaxtype=ajaxnotarsearch", {
+			minChars: 3,
+			selectFirst: false,
+			dataType: "text",
+			requestType: "POST",
+			extraParams: {
+				city: function(){
+					var city = $("#city_notar")[0];
+					if (city.value != city.defaultValue){
+						return city.value;
+					}
+					return "";
+				}
+			},
+			className: 'headerSearchAutoComplete'
+		});
+		handleEnterSubmit('notarde_search_notar_form');
+		
+		$(".searchBoxSubmit.searchBoxSubmit_notar").click(function() {
+			//default search case
+			if($("#search_type_").attr("value") == "default") {
+				searchFormSubmit('notarde_search_notar_form');
+				return;
+			}
+		
+			//geo search case
+			if($("#street__geo").attr("ac_selected") == "true" &&
+				$("#city_notar_id").val() && 
+				$("#zip_notar").val()) 
+			{
+				searchFormSubmit('notarde_search_notar_form');
+			} else {
+				$(".geo_message").html("Die Umkreissuche erfordert die Eingabe eines Ortes und einer Straße. Verwenden Sie hierzu bitte jeweils den passenden Eintrag aus der Vorschlagsliste.").slideDown();
+			}
+		});
+		
+		//new code 
+		
+		$("ul.tabs li").click(function() {
+			$("ul.tabs li").removeClass("activeFolder");
+			$(this).addClass("activeFolder");
+			$(".tab").hide();
+			var activeTab = $(this).attr("rel"); 
+			$("#"+activeTab).fadeIn(); 
+			var searchType = $("#"+activeTab).attr("data-search-type");
+			$("#search_type_").attr("value", searchType);
+			
+			$("#city_notar_geo").val($("#city_notar_geo").attr('__default'));
+			$("#city_notar").val($("#city_notar").attr('__default'));
+			$("#street__geo").val($("#street__geo").attr('__default'));
+			
+			$("#city_notar_id").val('');
+			$("#zip_notar").val('');
+			$("#zip_notar_display").html('');
+			$("#radius_").val('');
+			$("#lat_geo").val('');
+			$("#lon_geo").val('');
+		});
+		
+		//test
+		
+		var autocompleteService, placesService, results, map, geocoder;
+
+		function initialize() {
+		
+		    results = document.getElementById('results');
+			
+			var mapOptions = {
+		        zoom: 5,
+		        center: new google.maps.LatLng(46, 6)
+		    };
+		
+			geocoder = new google.maps.Geocoder();
+		    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+		
+		    // Bind listener for address search
+		    google.maps.event.addDomListener(document.getElementById("street__geo"), 'input', function () {
+		
+				$("#street__geo").attr("ac_selected","false");
+		
+				if (document.getElementById("street__geo").value !== '' && document.getElementById("street__geo").value.length >= 4 && document.getElementById("city_notar_geo").value !== 'Ort und PLZ ...') {
+		        	results.style.display = 'block';
+		        	getPlacePredictions(document.getElementById("street__geo").value + ', ' + document.getElementById("city_notar_geo").value);
+		        } else {
+		        	results.style.display = 'block';
+		    		results.innerHTML = '<div class="pac-item pac-item-error">Bitte geben Sie mindestens die ersten 4 Anfangsbuchstaben eines Straßennamens ein.</div>';
+		        }
+		    });
+		
+		    // Show results when address field is focused (if not empty)
+		    google.maps.event.addDomListener(document.getElementById("street__geo"), 'focus', function () {
+		
+		        if (document.getElementById("street__geo").value !== '' && document.getElementById("street__geo").value.length >= 4 && document.getElementById("city_notar_geo").value !== 'Ort und PLZ ...') {
+		
+		            results.style.display = 'block';
+		            getPlacePredictions(document.getElementById("street__geo").value + ', ' + document.getElementById("city_notar_geo").value);
+		        }
+		    });
+		
+		    // Hide results when click occurs out of the results and inputs
+		    google.maps.event.addDomListener(document, 'click', function (e) {
+		
+		        if ((e.target.parentElement.className == 'pac-container') && (e.target.parentElement.className !== 'pac-item') && (e.target.tagName !== 'INPUT')) {
+		
+		            $("#results").hide();
+		        }
+		    });
+		
+		
+		    autocompleteService = new google.maps.places.AutocompleteService();
+		    placesService = new google.maps.places.PlacesService(map);
+		}
+		
+		// Get place predictions
+		function getPlacePredictions(search) {
+		
+		    autocompleteService.getPlacePredictions({
+		        input: search,
+		        types: ['geocode']
+		    }, callback);
+		}
+		
+		// Get place details
+		function getPlaceDetails(placeId) {
+		
+		    var request = {
+		        placeId: placeId
+		    };
+		
+		    placesService.getDetails(request, function (place, status) {
+		
+		        if (status === google.maps.places.PlacesServiceStatus.OK) {
+		
+		           document.getElementById("lat_geo").value = place.geometry.location.lat();
+		           document.getElementById("lon_geo").value = place.geometry.location.lng();
+				   document.getElementById("street__geo").value = place.formatted_address.split(",")[0];
+				   $("#street__geo").attr("ac_selected","true");
+		           $(".geo_message").html("").slideUp();	
+		           
+		        }
+		    });
+		}
+		
+		// Place search callback
+		function callback(predictions, status) {
+		
+		    // Empty results container
+		    results.innerHTML = '';
+		
+		    // Place service status error
+		    if (status != google.maps.places.PlacesServiceStatus.OK) {
+		        results.innerHTML = '<div class="pac-item pac-item-error">Die Straße konnte nicht gefunden werden, keine Ergebnisse.</div>';
+		        return;
+		    }
+		
+		    // Build output for each prediction
+		    for (var i = 0, prediction; prediction = predictions[i]; i++) {
+				var output = prediction.description;
+		
+		        // Insert output in results container
+		        results.innerHTML += '<div class="pac-item" data-placeid="' + prediction.place_id + '" data-name="' + prediction.terms[0].value + '"><span class="pac-icon pac-icon-marker"></span>' + output + '</div>';
+		    }
+		
+		    var items = document.getElementsByClassName("pac-item");
+		
+		    // Results items click
+		    for (var i = 0, item; item = items[i]; i++) {
+		
+		        item.onclick = function () {
+		            getPlaceDetails(this.dataset.placeid);
+					this.style.display = "none";
+		        };
+		    }
+		}
+		
+		google.maps.event.addDomListener(window, 'load', initialize);
+		
+		
+		//end
+		
+		function geoSearchByCity() {
+			var address = document.getElementById("zip_notar").value+' '+document.getElementById("city_notar_geo").value;
+		  	geocoder.geocode( { 'address': address, 'region': 'de'}, function(results, status) {
+		    	if (status == google.maps.GeocoderStatus.OK) {
+		      		var location = results[0].geometry.location;
+		      		//console.log("starting geo based search "+location);
+		     
+		     		document.getElementById("lat_geo").value = location.lat();
+					document.getElementById("lon_geo").value = location.lng();
+					$("#street__geo").attr("ac_selected","true");
+		    	}
+			});
+		}
+		
+		
+	});
+</script>				</div>
+				<div id="formContainer_urkunden" class="hiddenSearchForm">
+<div class="searchControlsArea">
+	<div class="headersArea">
+		<h1>Urkundensuche</h1>
+		<p class="searchShortText">
+			
+		</p>
+	</div>
+	<div class="searchBoxArea">
+		<div class="searchBoxTop"></div>
+		<div class="searchBoxTopLeft"></div>
+		<div class="searchBoxTopRight"></div>
+		<div class="searchBoxBottom"></div>
+		<div class="searchBoxBottomLeft"></div>
+		<div class="searchBoxBottomRight"></div>
+		<div class="searchBoxLeft"></div>
+		<div class="searchBoxRight"></div>
+		<div class="searchBoxBg"></div>
+		<div class="searchBoxAngle"></div>
+		<div class="searchBoxSubmit" onclick="searchFormSubmit('notarde_search_urkunden_form');">Suche starten</div>
+		<div class="searchBoxLupe"></div>
+		<div class="searchBoxContent">
+			<h3 class="searchBoxTitle">Die Verwahrstelle einer Urkunde können Sie hier finden...</h3>
+			<p class="searchBoxDescription">Sie können nur ein Feld ausfüllen oder mehrere Suchen kombinieren.</p>
+			<form id="notarde_search_urkunden_form" action="/suchergebnis" method="GET">
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<div class="inputWrapper fieldContainer_lastname">
+									<input type="text" id="lastname_urkunden" name="lastname" value="Nachname ..." __default="Nachname ..." onfocus="wcmsUtils.handleDefaultValue(this);" onblur="wcmsUtils.handleDefaultValue(this, true);" __regExp=".{3}" />
+								</div>
+							</td>
+							<td>
+								<div class="inputWrapper fieldContainer_firstname">
+									<input type="text" id="firstname_urkunden" name="firstname" value="Vorname ..." __default="Vorname ..." onfocus="wcmsUtils.handleDefaultValue(this);" onblur="wcmsUtils.handleDefaultValue(this, true);" __regExp="^$|.{3}" />
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="inputWrapper fieldContainer_city">
+									<input type="hidden" name="active_search" value="urkunden"/>
+									<input type="text" id="city_urkunden" name="city" value="Ort ..." __default="Ort ..." onfocus="wcmsUtils.handleDefaultValue(this);" onblur="wcmsUtils.handleDefaultValue(this, true);" __regExp="^$|.{3}" />
+								</div>
+							</td>
+							<td>
+								<div class="inputWrapper">
+									<input type="text" name="zip" id="zip_urkunden" value="Postleitzahl ..." __default="Postleitzahl ..." onfocus="wcmsUtils.handleDefaultValue(this);" onblur="wcmsUtils.handleDefaultValue(this, true);"/>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div id="region_urkunden" class="inputWrapper selectWrapper">
+									<div class="inputSelect">
+										<span class="selectDisplay">Kammerbezirk ...</span>
+										<div class="selectTrigger"></div>
+									</div>
+									<input type="hidden" name="region_id" value="">
+									<div class="selectList">
+										<div class="selectEntry default">
+											<div class="title">Kammerbezirk ...</div>
+											<div class="display">Bitte auswählen</div>
+											<div class="value"></div>
+										</div>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div class="inputWrapper">
+									<input type="text" id="yearsert_urkunden" name="yearsert" value="Urkundenjahr ..." __default="Urkundenjahr ..." onfocus="wcmsUtils.handleDefaultValue(this);" onblur="wcmsUtils.handleDefaultValue(this, true);"/>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+<div id="flashMap_urkunden" class="searchMapArea">
+</div>
+<script type="text/javascript">
+	insertSelectOptions({
+		selector: '#region_urkunden',
+		options: notardeSearchForm.regionsAutocomplete("notar"),
+		onSelectCallback: function(name, id){
+			notardeSearchForm.selectRegionOnMap(name, 'urkunden');
+		}
+	});
+	notardeSearchForm.renderMap('urkunden', '/101000/designs/notar_de/flash/karte.swf', null, null, $('#region_urkunden .selectDisplay').text());
+	$(document).ready(function(){
+		$("#city_urkunden").autocomplete("/index.html?ajax=true&ajaxtype=ajaxcitysearch", {
+			minChars: 3,
+			selectFirst: false,
+			dataType: "text",
+			requestType: "POST"
+		});
+		$("#lastname_urkunden").autocomplete("/index.html?ajax=true&ajaxtype=ajaxnotarsearch&searchtype=lastname&searchdoc=true", {
+			minChars: 3,
+			selectFirst: false,
+			dataType: "text",
+			requestType: "POST",
+			extraParams: {
+				city: function(){
+					var city = $("#city_urkunden")[0];
+					if (city.value != city.defaultValue){
+						return city.value;
+					}
+					return "";
+				}
+			}
+		});
+		handleEnterSubmit('notarde_search_urkunden_form');
+	});
+</script>				</div>
+				<div id="formContainer_gerichts" class="hiddenSearchForm">
+<div class="searchControlsArea">
+		<div class="headersArea">
+		<h1>Gerichtssuche</h1>
+		<p class="searchShortText">
+			
+		</p>
+	</div>
+	<div class="searchBoxArea gerichtsSearchForm">
+		<div class="searchBoxTop"></div>
+		<div class="searchBoxTopLeft"></div>
+		<div class="searchBoxTopRight"></div>
+		<div class="searchBoxBottom"></div>
+		<div class="searchBoxBottomLeft"></div>
+		<div class="searchBoxBottomRight"></div>
+		<div class="searchBoxLeft"></div>
+		<div class="searchBoxRight"></div>
+		<div class="searchBoxBg"></div>
+		<div class="searchBoxAngle"></div>
+		<div class="searchBoxSubmit" onclick="searchFormSubmit('notarde_search_gerichts_form_'+$('.searchBoxCourtType input[name=search_type]:checked').val());">Suche starten</div>
+		<div class="searchBoxLupe"></div>
+		<div class="searchBoxContent">
+			<h3 class="searchBoxTitle">Ein Gericht in Ihrer Nähe können Sie hier finden...</h3>
+			<p class="searchBoxDescription">Sie können nur ein Feld ausfüllen oder mehrere Suchen kombinieren.</p>
+			<div class="searchBoxCourtType">
+				<label><input type="radio" name="search_type" value="jurisdiction" onclick="changeCourtType('gerichts', this.value);" checked="checked"> Zuständigkeit ermitteln </label>
+				<label><input type="radio" name="search_type" value="hierarchical" onclick="changeCourtType('gerichts', this.value);" > Gerichtsuche </label>
+			</div>
+			<form id="notarde_search_gerichts_form_jurisdiction" class="searchForm_gerichts" action="/suchergebnis" method="GET" style="display: block;">
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<div class="inputWrapper">
+									<div class="additionalValue" id="zip_gerichts_display"></div>
+									<input type="hidden" name="active_search" value="gerichts"/>
+									<input type="hidden" name="search_type" value="jurisdiction"/>
+									<input type="hidden" id="zipandcity_gerichts_jurisdiction_zip" name="zipandcity_zip" value=""/>
+									<input type="hidden" id="zipandcity_gerichts_jurisdiction_id" name="zipandcity_id" value=""/>
+									<input type="text" id="zipandcity_gerichts_jurisdiction" name="zipandcity" value="PLZ und Ort ..." __default="PLZ und Ort ..." onkeyup="wcmsUtils.handleMultivalueAutocomplete(event, this, false, function(){$('#zipandcity_gerichts_jurisdiction_zip').val('');$('#zip_gerichts_display').html('');});" onfocus="wcmsUtils.handleDefaultValue(this);" onblur="wcmsUtils.handleMultivalueAutocomplete(event, this, true);wcmsUtils.handleDefaultValue(this, true);"/>
+								</div>
+							</td>
+							<td>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="inputWrapper">
+									<input type="text" id="street_gerichts_jurisdiction" name="street" value="Strasse ..." __default="Strasse ..." onfocus="wcmsUtils.handleDefaultValue(this);" onblur="wcmsUtils.handleDefaultValue(this, true);"/>
+								</div>
+							</td>
+							<td>
+								<div class="inputWrapper">
+									<input type="text" name="housenumber" id="housenumber_gerichts_jurisdiction" value="Hausnummer ..." __default="Hausnummer ..." onfocus="wcmsUtils.handleDefaultValue(this);" onblur="wcmsUtils.handleDefaultValue(this, true);"/>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+			<form id="notarde_search_gerichts_form_hierarchical" class="searchForm_gerichts" action="/suchergebnis" method="GET" style="display: none;">
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<div class="inputWrapper">
+									<input type="hidden" name="active_search" value="gerichts"/>
+									<input type="hidden" name="search_type" value="hierarchical"/>
+									<input type="hidden" id="courtdistrict_gerichts_hierarchical_id" name="courtdistrict_id" value=""/>
+									<input type="text" id="courtdistrict_gerichts_hierarchical" name="courtdistrict" value="Amtsgericht ..." __default="Amtsgericht ..." onkeyup="wcmsUtils.handleMultivalueAutocomplete(event, this);" onfocus="wcmsUtils.handleDefaultValue(this);" onblur="wcmsUtils.handleMultivalueAutocomplete(event, this, true);wcmsUtils.handleDefaultValue(this, true);"/>
+								</div>
+							</td>
+							<td>
+								<div class="inputWrapper">
+									<input type="hidden" id="courtappeal_gerichts_hierarchical_id" name="courtappeal_id" value=""/>
+									<input type="text" id="courtappeal_gerichts_hierarchical" name="courtappeal" value="Oberlandesgericht ..." __default="Oberlandesgericht ..." onkeyup="wcmsUtils.handleMultivalueAutocomplete(event, this);" onfocus="wcmsUtils.handleDefaultValue(this);" onblur="wcmsUtils.handleMultivalueAutocomplete(event, this, true);wcmsUtils.handleDefaultValue(this, true);"/>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div id="region_gerichts" class="inputWrapper selectWrapper">
+									<div class="inputSelect">
+										<span class="selectDisplay">Bundesland ...</span>
+										<div class="selectTrigger"></div>
+									</div>
+									<input type="hidden" name="region_id" value="">
+									<div class="selectList">
+										<div class="selectEntry default">
+											<div class="title">Bundesland ...</div>
+											<div class="display">Bitte auswählen</div>
+											<div class="value"></div>
+										</div>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div class="inputWrapper selectWrapper">
+									<div class="inputSelect">
+										<span class="selectDisplay">Abteilung ...</span>
+										<div class="selectTrigger"></div>
+									</div>
+									<input type="hidden" name="department" value="">
+									<div class="selectList">
+										<div class="selectEntry default">
+											<div class="title">Abteilung ...</div>
+											<div class="display">Nicht angegeben</div>
+											<div class="value"></div>
+										</div>
+										<div class="selectEntry">
+											<div class="display">Nachlassgericht</div>
+											<div class="value">NG</div>
+										</div>
+										<div class="selectEntry">
+											<div class="display">Handelsregister</div>
+											<div class="value">HR</div>
+										</div>
+										<div class="selectEntry">
+											<div class="display">Grundbuchamt</div>
+											<div class="value">GB</div>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+<div id="flashMap_gerichts" class="searchMapArea" style="display:none;">
+</div>
+<script type="text/javascript">
+	insertSelectOptions({
+		selector: '#region_gerichts',
+		options: notardeSearchForm.regionsAutocomplete("gerichts"),
+		onSelectCallback: function(name, id){
+			notardeSearchForm.selectRegionOnMap(name, 'gerichts');
+		}
+	});
+	notardeSearchForm.renderMap('gerichts', '/101000/designs/notar_de/flash/karte_gerichts.swf', null, null, $('#region_gerichts .selectDisplay').text());
+	$(document).ready(function(){
+		$("#zipandcity_gerichts_jurisdiction").autocomplete("/index.html?type=jurisdiction_city&ajax=true&ajaxtype=autocomplete_service", {
+			minChars: 3,
+			selectFirst: false,
+			dataType: "text",
+			requestType: "POST",
+			formatResult: function(val){
+				return val;
+			},
+			formatItem: function(val){
+				if(val[1] && "null" != val[1]){
+					return val[0] +  " - " + val[1];
+				}
+				else {
+					return val[0];
+				}
+			},
+			onSelectCallback : function(val){
+				$("#zipandcity_gerichts_jurisdiction").attr('value', val[0]);
+				$("#zipandcity_gerichts_jurisdiction_id").val(val[2]);
+				if(val[1] && val[1] != "null") {
+					$("#zipandcity_gerichts_jurisdiction_zip").val(val[1]);
+					$("#zip_gerichts_display").html('PLZ: ' + val[1]);
+				}
+			}
+		});
+		$("#courtdistrict_gerichts_hierarchical").autocomplete("/index.html?type=hierarchical_district&ajax=true&ajaxtype=autocomplete_service", {
+			minChars: 3,
+			selectFirst: false,
+			dataType: "text",
+			requestType: "POST",
+			formatResult: function(val){
+				return val;
+			},
+			onSelectCallback : function(val){
+				$("#courtdistrict_gerichts_hierarchical").val(val[0]);
+				$("#courtdistrict_gerichts_hierarchical_id").val(val[1]);
+			}
+		});
+		$("#courtappeal_gerichts_hierarchical").autocomplete("/index.html?type=hierarchical_appeal&ajax=true&ajaxtype=autocomplete_service", {
+			minChars: 3,
+			selectFirst: false,
+			dataType: "text",
+			requestType: "POST",
+			formatResult: function(val){
+				return val;
+			},
+			onSelectCallback : function(val){
+				$("#courtappeal_gerichts_hierarchical").val(val[0]);
+				$("#courtappeal_gerichts_hierarchical_id").val(val[1]);
+			}
+		});
+		handleEnterSubmit('notarde_search_gerichts_form_jurisdiction');
+		handleEnterSubmit('notarde_search_gerichts_form_hierarchical');
+	});
+</script>
+<div class="cityIndexArea" style="display:none;">
+	<h3>Orte von A-Z</h3>
+	<table>
+		<tbody>
+				<tr>
+						<td>
+							<a href="#A">A</a>
+						</td>
+						<td>
+							<a href="#B">B</a>
+						</td>
+						<td>
+							<a href="#C">C</a>
+						</td>
+				</tr>
+				<tr>
+						<td>
+							<a href="#D">D</a>
+						</td>
+						<td>
+							<a href="#E">E</a>
+						</td>
+						<td>
+							<a href="#F">F</a>
+						</td>
+				</tr>
+				<tr>
+						<td>
+							<a href="#G">G</a>
+						</td>
+						<td>
+							<a href="#H">H</a>
+						</td>
+						<td>
+							<a href="#I">I</a>
+						</td>
+				</tr>
+				<tr>
+						<td>
+							<a href="#J">J</a>
+						</td>
+						<td>
+							<a href="#K">K</a>
+						</td>
+						<td>
+							<a href="#L">L</a>
+						</td>
+				</tr>
+				<tr>
+						<td>
+							<a href="#M">M</a>
+						</td>
+						<td>
+							<a href="#N">N</a>
+						</td>
+						<td>
+							<a href="#O">O</a>
+						</td>
+				</tr>
+				<tr>
+						<td>
+							<a href="#P">P</a>
+						</td>
+						<td>
+							<a href="#Q">Q</a>
+						</td>
+						<td>
+							<a href="#R">R</a>
+						</td>
+				</tr>
+				<tr>
+						<td>
+							<a href="#S">S</a>
+						</td>
+						<td>
+							<a href="#T">T</a>
+						</td>
+						<td>
+							<a href="#U">U</a>
+						</td>
+				</tr>
+				<tr>
+						<td>
+							<a href="#V">V</a>
+						</td>
+						<td>
+							<a href="#W">W</a>
+						</td>
+						<td>
+							<a href="#X">X</a>
+						</td>
+				</tr>
+				<tr>
+						<td>
+							<a href="#Y">Y</a>
+						</td>
+						<td>
+							<a href="#Z">Z</a>
+						</td>
+				</tr>
+		</tbody>
+	</table>
+</div>				</div>
+				<div id="formContainer_grundbuch" class="hiddenSearchForm">
+<div class="searchControlsArea">
+		<div class="headersArea">
+		<h1>Grundbuchamts-Suche</h1>
+		<p class="searchShortText">
+			
+		</p>
+	</div>
+	<div class="searchBoxArea gerichtsSearchForm">
+		<div class="searchBoxTop"></div>
+		<div class="searchBoxTopLeft"></div>
+		<div class="searchBoxTopRight"></div>
+		<div class="searchBoxBottom"></div>
+		<div class="searchBoxBottomLeft"></div>
+		<div class="searchBoxBottomRight"></div>
+		<div class="searchBoxLeft"></div>
+		<div class="searchBoxRight"></div>
+		<div class="searchBoxBg"></div>
+		<div class="searchBoxAngle"></div>
+		<div class="searchBoxSubmit" onclick="searchFormSubmit('notarde_search_grundbuch_form_landregistry');">Suche starten</div>
+		<div class="searchBoxLupe"></div>
+		<div class="searchBoxContent">
+			<h3 class="searchBoxTitle">Das zuständige Grundbuchamt können sie hier suchen...</h3>
+			<p class="searchBoxDescription">Sie können nur ein Feld ausfüllen oder mehrere Suchen kombinieren.</p>
+			<form id="notarde_search_grundbuch_form_landregistry" class="searchForm_grundbuch" action="/suchergebnis" method="GET">
+				<div class="searchBoxCourtType">
+					<label>
+						<input type="hidden" name="notprospective" value="" />
+						<input type="checkbox" name="prospective" checked="checked" value="checked" onclick="handleCheckBoxClick(this);handleNegativeValue(this);" />
+						inkl. geplanter Zuständigkeiten
+					</label>
+				</div>
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<div class="inputWrapper">
+									<input type="hidden" name="active_search" value="grundbuch"/>
+									<input type="hidden" id="landregistry_grundbuch_landregistry_id" name="landregistry_id" value=""/>
+									<input type="text" id="landregistry_grundbuch_landregistry" name="landregistry" value="Grundbuchamt ..." __default="Grundbuchamt ..." onkeyup="wcmsUtils.handleMultivalueAutocomplete(event, this);" onfocus="wcmsUtils.handleDefaultValue(this);" onblur="wcmsUtils.handleMultivalueAutocomplete(event, this, true);wcmsUtils.handleDefaultValue(this, true);"/>
+								</div>
+							</td>
+							<td>
+								<div class="inputWrapper">
+									<div class="additionalValue" id="zip_grundbuch_landregistry_display"></div>
+									<input type="hidden" id="city_grundbuch_landregistry_zip" name="landregistry_city_zip" value=""/>
+									<input type="hidden" id="city_grundbuch_landregistry_id" name="landregistry_city_id" value=""/>
+									<input type="text" id="city_grundbuch_landregistry" name="landregistry_city" value="Ort ..." __default="Ort ..." onkeyup="wcmsUtils.handleMultivalueAutocomplete(event, this, false, function(){$('#city_grundbuch_landregistry_zip').val('');$('#zip_grundbuch_landregistry_display').html('');});" onfocus="wcmsUtils.handleDefaultValue(this);" onblur="wcmsUtils.handleMultivalueAutocomplete(event, this, true);wcmsUtils.handleDefaultValue(this, true);"/>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="inputWrapper">
+									<input type="text" name="land_district" id="land_district_grundbuch_landregistry" value="Grundbuchbezirk ..." __default="Grundbuchbezirk ..." onkeyup="wcmsUtils.handleMultivalueAutocomplete(event, this);" onfocus="wcmsUtils.handleDefaultValue(this);" onblur="wcmsUtils.handleMultivalueAutocomplete(event, this, true);wcmsUtils.handleDefaultValue(this, true);"/>
+								</div>
+							</td>
+							<td>
+								<div class="inputWrapper">
+									<input type="text" name="district" id="district_grundbuch_landregistry" value="Gemarkung ..." __default="Gemarkung ..." onkeyup="wcmsUtils.handleMultivalueAutocomplete(event, this);" onfocus="wcmsUtils.handleDefaultValue(this);" onblur="wcmsUtils.handleMultivalueAutocomplete(event, this, true);wcmsUtils.handleDefaultValue(this, true);"/>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	var handleNegativeValue = function(elem){
+		if(elem){
+			if(elem.checked){
+				elem.parentNode.getElementsByTagName('input')[0].value = "";
+			}else{
+				elem.parentNode.getElementsByTagName('input')[0].value = "true";
+			}
+		}
+	};
+	$(document).ready(function(){
+		$("#city_grundbuch_landregistry").autocomplete("/index.html?type=landregistry_city&ajax=true&ajaxtype=autocomplete_service", {
+			minChars: 3,
+			selectFirst: false,
+			dataType: "text",
+			requestType: "POST",
+			formatResult: function(val){
+				return val;
+			},
+			formatItem: function(val){
+				if(val[1] && "null" != val[1]){
+					return val[0] +  " - " + val[1];
+				}
+				else {
+					return val[0];
+				}
+			},
+			onSelectCallback : function(val){
+				$("#city_grundbuch_landregistry").attr('value', val[0]);
+				$("#city_grundbuch_landregistry_id").val(val[2]);
+				if(val[1] && val[1] != "null") {
+					$("#city_grundbuch_landregistry_zip").val(val[1]);
+					$("#zip_grundbuch_landregistry_display").html('PLZ: ' + val[1]);
+				}
+			}
+		});
+		$("#landregistry_grundbuch_landregistry").autocomplete("/index.html?type=landregistry_landregistry&ajax=true&ajaxtype=autocomplete_service", {
+			minChars: 3,
+			selectFirst: false,
+			dataType: "text",
+			requestType: "POST",
+			formatResult: function(val){
+				return val;
+			},
+			onSelectCallback : function(val){
+				$("#landregistry_grundbuch_landregistry").val(val[0]);
+				$("#landregistry_grundbuch_landregistry_id").val(val[1]);
+			}
+		});
+		$("#district_grundbuch_landregistry").autocomplete("/index.html?type=landregistry_district&ajax=true&ajaxtype=autocomplete_service", {
+			minChars: 3,
+			selectFirst: false,
+			dataType: "text",
+			requestType: "POST",
+			formatResult: function(val){
+				return val;
+			},
+			onSelectCallback : function(val){
+				$("#district_grundbuch_landregistry").val(val[0]);
+			}
+		});
+		$("#land_district_grundbuch_landregistry").autocomplete("/index.html?type=landregistry_land_district&ajax=true&ajaxtype=autocomplete_service", {
+			minChars: 3,
+			selectFirst: false,
+			dataType: "text",
+			requestType: "POST"
+		});
+		handleEnterSubmit('notarde_search_grundbuch_form_landregistry');
+	});
+	
+		
+</script>				</div>
+				<div id="formContainer_standesamt" class="hiddenSearchForm">
+<div class="searchControlsArea">
+	<div class="headersArea">
+		<h1>Standesamts-Suche</h1>
+		<p class="searchShortText">
+			
+		</p>
+	</div>
+	<div class="searchBoxArea">
+		<div class="searchBoxTop"></div>
+		<div class="searchBoxTopLeft"></div>
+		<div class="searchBoxTopRight"></div>
+		<div class="searchBoxBottom"></div>
+		<div class="searchBoxBottomLeft"></div>
+		<div class="searchBoxBottomRight"></div>
+		<div class="searchBoxLeft"></div>
+		<div class="searchBoxRight"></div>
+		<div class="searchBoxBg"></div>
+		<div class="searchBoxAngle"></div>
+			<div class="searchBoxSubmit" id="tvue_search_submit" onclick="searchFormSubmit('notarde_search_standesamt_form_tvue');" style="display: block;">Suche starten</div>
+			<div class="searchBoxSubmit" id="responsible_search_submit" onclick="searchFormSubmit('notarde_search_standesamt_form_responsible');" style="display: none;">Suche starten</div>
+		<div class="searchBoxLupe"></div>
+		<div class="searchBoxContent">
+                	<h3 class="searchBoxTitle">Das zuständige Standesamt zu Ort und Geburtsdatum können Sie hier finden...</h3>
+                	<p class="searchBoxDescription">Sie können die Suche auch ohne Datumsangabe durchführen.</p>
+                <div class="searchBoxCourtType">
+				<label><input type="radio" name="search_type_sv" value="tvue" onclick="changeStandesamtType('standesamt', this.value);" checked> Standesamtssuche </label>
+				<label><input type="radio" name="search_type_sv" value="responsible" onclick="changeStandesamtType('standesamt', this.value);" > Zuständigkeitssuche </label>
+			</div>
+				<form id="notarde_search_standesamt_form_tvue" class="searchForm_standesamt" action="/suchergebnis" method="GET"  style="display: block;">
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<div class="inputWrapper" style="width: 190px;">
+									<div class="additionalValue" id="zip_standesamt_tvue_display"></div>
+									<input type="hidden" name="active_search" value="standesamt"/>
+									<input type="hidden" name="search_type" value="tvue"/>
+									<input type="hidden" id="zipandcity_standesamt_tvue_zip" name="zipandcity_zip" value=""/>
+									<input type="hidden" id="zipandcity_standesamt_tvue_text" name="zipandcity_text" value=""/>
+									<input type="hidden" id="zipandcity_standesamt_tvue_id" name="zipandcity_id" value=""/>
+									<input type="text" id="zipandcity_standesamt_tvue" name="zipandcity" value="Ort ..." __default="Ort ..." onkeyup="wcmsUtils.handleMultivalueAutocomplete(event, this, false, deselectZIP_standesamt_responsible);" onfocus="wcmsUtils.handleDefaultValue(this);" onblur="wcmsUtils.handleDefaultValue(this, true);"/>
+								</div>
+							</td>
+							<td>
+								<div id="status_standesamt_tvue" class="inputWrapper selectWrapper">
+									<div class="inputSelect">
+										<span class="selectDisplay">Status der Überführung</span>
+										<div class="selectTrigger"></div>
+									</div>
+									<input type="hidden" name="status" value="" id="status_standesamt_tvue_field">
+									<div class="selectList">
+										<div class="selectEntry default">
+											<div class="title">Status der Überführung...</div>
+											<div class="display">Bitte auswählen</div>
+											<div class="value"></div>
+										</div>
+										<div class="selectEntry">
+											<div class="display">nicht überführt</div>
+											<div class="value">0</div>
+										</div>
+										<div class="selectEntry">
+											<div class="display">in Überführung</div>
+											<div class="value">1</div>
+										</div>
+										<div class="selectEntry">
+											<div class="display">überführt</div>
+											<div class="value">2</div>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<div id="region_standesamt" class="inputWrapper selectWrapper">
+									<div class="inputSelect">
+										<span class="selectDisplay">Bundesland ...</span>
+										<div class="selectTrigger"></div>
+									</div>
+									<input type="hidden" name="region_id" value="" id="region_standesamt_tvue_field">
+									<div class="selectList">
+										<div class="selectEntry default">
+											<div class="title">Bundesland ...</div>
+											<div class="display">Bitte auswählen</div>
+											<div class="value"></div>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="inputWrapper transferDateWrapper">
+									<input type="text" id="startdate_standesamt" name="startdate" value="Abholung geplant von" __default="Abholung geplant von" onkeyup="wcmsUtils.handleEnterKey(event, wcmsUtils.preocessDateValue, this);" onfocus="wcmsUtils.handleDefaultValue(this);" onblur="wcmsUtils.handleDefaultValue(this, true);wcmsUtils.preocessDateValue(this);"/>
+								</div>
+							</td>
+							<td>
+								<div class="inputWrapper transferDateWrapper">
+									<input type="text" id="enddate_standesamt" name="enddate" value="Abholung geplant bis" __default="Abholung geplant bis" onkeyup="wcmsUtils.handleEnterKey(event, wcmsUtils.preocessDateValue, this);" onfocus="wcmsUtils.handleDefaultValue(this);" onblur="wcmsUtils.handleDefaultValue(this, true);wcmsUtils.preocessDateValue(this);"/>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+				<form id="notarde_search_standesamt_form_responsible" class="searchForm_standesamt" action="/suchergebnis" method="GET" style="display: none;">
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<div class="inputWrapper" style="width: 260px;">
+									<div class="additionalValue" id="zip_standesamt_responsible_display"></div>
+									<input type="hidden" name="active_search" value="standesamt"/>
+									<input type="hidden" name="search_type" value="responsible"/>
+									<input type="hidden" id="zipandcity_standesamt_responsible_zip" name="zipandcity_zip" value=""/>
+									<input type="hidden" id="zipandcity_standesamt_responsible_text" name="zipandcity_text" value=""/>
+									<input type="hidden" id="zipandcity_standesamt_responsible_id" name="zipandcity_id" value=""/>
+									<input type="text" id="zipandcity_standesamt_responsible" name="zipandcity" value="Ort ..." __default="Ort ..." onkeyup="wcmsUtils.handleMultivalueAutocomplete(event, this, false, deselectZIP_standesamt_responsible);" onfocus="wcmsUtils.handleDefaultValue(this);" onblur="wcmsUtils.handleDefaultValue(this, true);"/>
+								</div>
+							</td>
+							<td>
+								<div class="inputWrapper" style="width: 90px;">
+									<input type="text" id="birthdate_standesamt" name="birthdate" value="Geburtsdatum ..." __default="Geburtsdatum ..." onkeyup="wcmsUtils.handleEnterKey(event, wcmsUtils.preocessDateValue, this);" onfocus="wcmsUtils.handleDefaultValue(this);" onblur="wcmsUtils.handleDefaultValue(this, true);wcmsUtils.preocessDateValue(this);"/>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+<div id="flashMap_standesamt" class="searchMapArea" style="display:none;">
+</div>
+<script type="text/javascript">
+	//notardeSearchForm.renderMap('standesamt', '/101000/designs/notar_de/flash/karte_gerichts.swf', null, null, $('#region_standesamt').val());
+	var dateToShow = $('#birthdate_standesamt').val() != $('#birthdate_standesamt').attr('__default') && $('#birthdate_standesamt').val() != "" ? $('#birthdate_standesamt').val() : wcmsUtils.stringifyDate();
+	var startDateToShow = $('#startdate_standesamt').val() != $('#startdate_standesamt').attr('__default') && $('#startdate_standesamt').val() != "" ? $('#startdate_standesamt').val() : wcmsUtils.stringifyDate();
+	var endDateToShow = $('#enddate_standesamt').val() != $('#enddate_standesamt').attr('__default') && $('#enddate_standesamt').val() != "" ? $('#enddate_standesamt').val() : wcmsUtils.stringifyDate();
+	
+	insertSelectOptions({
+		selector: '#region_standesamt',
+		options: notardeSearchForm.regionsAutocomplete("standesamt"),
+		onSelectCallback: function(name, id){
+			notardeSearchForm.selectRegionOnMap(name, 'standesamt');
+			updateFieldVisibility();
+		}
+	});
+	
+	$(document).ready(function(){
+		$(".componentseparator").hide();
+		updateFieldVisibility();
+		$('#birthdate_standesamt').DatePicker({
+			format:'d.m.Y',
+			date: wcmsUtils.parseDate(dateToShow),
+			current: wcmsUtils.parseDate(dateToShow),
+			calendars: 1,
+			starts: 1,
+			onBeforeShow: function(){
+				if($('#birthdate_standesamt').val() != $('#birthdate_standesamt').attr('__default') && $('#birthdate_standesamt').val() != "") {
+					var theDate = wcmsUtils.parseDate($('#birthdate_standesamt').val());
+					if(!theDate.getFullYear()){
+						theDate = new Date();
+					}
+					$('#birthdate_standesamt').DatePickerSetDate(theDate, true);
+				}
+			},
+			onChange: function(formated, dates) {
+				if(dateToShow != formated) {
+					dateToShow = formated;
+					$('#birthdate_standesamt').val(formated);
+					$('#birthdate_standesamt').DatePickerHide();
+				}
+			},
+			view: $('#birthdate_standesamt').val() != $('#birthdate_standesamt').attr('__default') ? 'days' : 'years'
+		});
+		
+		$('#startdate_standesamt').DatePicker({
+			format:'d.m.Y',
+			date: wcmsUtils.parseDate(startDateToShow),
+			current: wcmsUtils.parseDate(startDateToShow),
+			calendars: 1,
+			starts: 1,
+			onBeforeShow: function(){
+				if($('#startdate_standesamt').val() != $('#startdate_standesamt').attr('__default') && $('#startdate_standesamt').val() != "") {
+					var theDate = wcmsUtils.parseDate($('#startdate_standesamt').val());
+					if(!theDate.getFullYear()){
+						theDate = new Date();
+					}
+					$('#startdate_standesamt').DatePickerSetDate(theDate, true);
+				}
+			},
+			onChange: function(formated, dates) {
+				if(dateToShow != formated) {
+					dateToShow = formated;
+					$('#startdate_standesamt').val(formated);
+					$('#startdate_standesamt').DatePickerHide();
+				}
+			},
+			view: $('#startdate_standesamt').val() != $('#startdate_standesamt').attr('__default') ? 'days' : 'years'
+		});
+		
+		
+		$('#enddate_standesamt').DatePicker({
+			format:'d.m.Y',
+			date: wcmsUtils.parseDate(endDateToShow),
+			current: wcmsUtils.parseDate(endDateToShow),
+			calendars: 1,
+			starts: 1,
+			onBeforeShow: function(){
+				if($('#enddate_standesamt').val() != $('#enddate_standesamt').attr('__default') && $('#enddate_standesamt').val() != "") {
+					var theDate = wcmsUtils.parseDate($('#enddate_standesamt').val());
+					if(!theDate.getFullYear()){
+						theDate = new Date();
+					}
+					$('#enddate_standesamt').DatePickerSetDate(theDate, true);
+				}
+			},
+			onChange: function(formated, dates) {
+				if(dateToShow != formated) {
+					dateToShow = formated;
+					$('#enddate_standesamt').val(formated);
+					$('#enddate_standesamt').DatePickerHide();
+				}
+			},
+			view: $('#enddate_standesamt').val() != $('#enddate_standesamt').attr('__default') ? 'days' : 'years'
+		});
+		
+		
+	});
+	var deselectZIP_standesamt_responsible = function(){
+		$('#zipandcity_standesamt_responsible_zip').val('');
+		$('#zipandcity_standesamt_responsible_text').val('');
+		$('#zip_standesamt_responsible_display').html('');
+	};
+	
+		var deselectZIP_standesamt_tvue = function(){
+		$('#zipandcity_standesamt_tvue_zip').val('');
+		$('#zipandcity_standesamt_tvue_text').val('');
+		$('#zip_standesamt_tvue_display').html('');
+	};
+	
+	$(document).ready(function(){
+/*		$("#zipandcity_standesamt_tvue").on("click",function(){
+			$('#status_standesamt_tvue_field').val("");
+			$('#status_standesamt_tvue .selectDisplay').html("Status der Überführung...");
+		});
+		
+		$("body").on("click", function(){
+			updateFieldVisibility();
+		});
+	*/	$("#zipandcity_standesamt_tvue").autocomplete("/index.html?type=standesamt_city_all&ajax=true&ajaxtype=autocomplete_service", {
+			minChars: 3,
+			selectFirst: false,
+			dataType: "text",
+			requestType: "POST",
+			formatResult: function(val){
+				return val;
+			},
+			formatItem: function(val){
+				if(val[1] && "null" != val[1] && val[3] && "null" != val[3]){
+					return val[3];
+				}
+				else {
+					return val[0];
+				}
+			},
+			onSelectCallback : function(val){
+				updateFieldVisibility();
+				$("#zipandcity_standesamt_tvue").attr('value', val[0]);
+				$("#zipandcity_standesamt_tvue_id").val(val[2]);
+				if(val[1] && val[1] != "null") {
+					$("#zipandcity_standesamt_tvue_zip").val(val[1]);
+					$("#zipandcity_standesamt_tvue_text").val(val[3]);
+					$("#zip_standesamt_tvue_display").html(val[3]);
+				}
+				else {
+					$("#zipandcity_standesamt_tvue_zip").val('');
+					$("#zipandcity_standesamt_tvue_text").val('');
+					$("#zip_standesamt_tvue_display").html('');
+				}
+			},
+			className: 'headerSearchAutoCompleteLarge'
+		});
+			handleEnterSubmit('notarde_search_standesamt_form_tvue');
+		$("#zipandcity_standesamt_responsible").autocomplete("/index.html?type=standesamt_city_all&ajax=true&ajaxtype=autocomplete_service", {
+			minChars: 3,
+			selectFirst: false,
+			dataType: "text",
+			requestType: "POST",
+			formatResult: function(val){
+				return val;
+			},
+			formatItem: function(val){
+				if(val[1] && "null" != val[1] && val[3] && "null" != val[3]){
+					return val[3];
+				}
+				else {
+					return val[0];
+				}
+			},
+			onSelectCallback : function(val){
+				$("#zipandcity_standesamt_responsible").attr('value', val[0]);
+				$("#zipandcity_standesamt_responsible_id").val(val[2]);
+				if(val[1] && val[1] != "null") {
+					$("#zipandcity_standesamt_responsible_zip").val(val[1]);
+					$("#zipandcity_standesamt_responsible_text").val(val[3]);
+					$("#zip_standesamt_responsible_display").html(val[3]);
+				}
+				else {
+					$("#zipandcity_standesamt_responsible_zip").val('');
+					$("#zipandcity_standesamt_responsible_text").val('');
+					$("#zip_standesamt_responsible_display").html('');
+				}
+			},
+			className: 'headerSearchAutoComplete standesamtSearchWide'
+		});
+			handleEnterSubmit('notarde_search_standesamt_form_responsible');
+	});
+	function updateFieldVisibility(){
+		if($("#zipandcity_standesamt_tvue").val() != "" && $("#zipandcity_standesamt_tvue").val() != $("#zipandcity_standesamt_tvue").attr("__default")){
+			$('#startdate_standesamt').attr("disabled", true);
+			$('#enddate_standesamt').attr("disabled", true);
+			$('.transferDateWrapper').addClass("disabled");
+		} else {
+			$('#startdate_standesamt').attr("disabled", false);
+			$('#enddate_standesamt').attr("disabled", false);
+			$('.transferDateWrapper').removeClass("disabled");
+		}
+		if($('#status_standesamt_tvue_field').val() == "0"){
+			$('#enddate_standesamt').attr("disabled", false);
+			$('#startdate_standesamt').attr("disabled", false);
+			$('#enddate_standesamt').removeClass("disabled");
+			$('#startdate_standesamt').removeClass("disabled");
+			$('.transferDateWrapper').removeClass("disabled");
+		} else {
+			$('#enddate_standesamt').attr("disabled", true);
+			$('#startdate_standesamt').attr("disabled", true);
+			$('#enddate_standesamt').addClass("disabled");
+			$('#startdate_standesamt').addClass("disabled");
+			$('#startdate_standesamt').val($('#startdate_standesamt').attr('__default'));
+			$('#enddate_standesamt').val($('#enddate_standesamt').attr('__default'));
+			$('.transferDateWrapper').addClass("disabled");
+		}
+		if($('#status_standesamt_tvue_field').val() != ""){
+			$('#zipandcity_standesamt_tvue').val($('#zipandcity_standesamt_tvue').attr('__default'));
+			$('#zipandcity_standesamt_tvue_zip').val('');
+			$('#zipandcity_standesamt_tvue_text').val('');
+			$('#zip_standesamt_tvue_display').html('');
+		}
+	}
+	
+</script>
+				</div>
+	</div>
+					</div>
+					<div id="content">
+
+	
+	<script type="text/javascript">
+		gridHandler.init('b14055a4-b13f-4bc7-b96c-234e54b336c1', 'http://notar.de/suchergebnis');
+		$(document).ready(function(){
+				gridHandler.showMap('b14055a4-b13f-4bc7-b96c-234e54b336c1');
+			$('.gridRowsTable .dataRow').each(function(){
+				if($(this).height() > 22) {
+					$(this).addClass('largeRow');
+				}
+			});
+			if(notardeSearchForm.getActiveForm()){
+				$('.searchGrid, .detailsHolderWrap').hide();
+				$('.results_' + notardeSearchForm.getActiveForm() + ', .details_' + notardeSearchForm.getActiveForm()).show();
+			}
+		});
+		gridHandler.instances['b14055a4-b13f-4bc7-b96c-234e54b336c1'].currentSearchType = "notar";
+		gridHandler.instances['b14055a4-b13f-4bc7-b96c-234e54b336c1'].searchSubType = "";
+		if("b14055a4-b13f-4bc7-b96c-234e54b336c1" == "testamentsregister"){
+			gridHandler.instances['b14055a4-b13f-4bc7-b96c-234e54b336c1'].isTestamentsregister = true;
+		}
+    </script>
+	<div id="searchGrid_b14055a4-b13f-4bc7-b96c-234e54b336c1" class="searchGrid results_notar ">
+		<div id="searchGrid_b14055a4-b13f-4bc7-b96c-234e54b336c1_loading" class="loading_mask searchGrid_loading">
+			<div class="loading_icon"></div>
+		</div>
+			<div class="mapCanvasWrap">
+				<div class="gridShadowTop"></div>
+				<div class="gridShadowTopRight"></div>
+				<div class="gridShadowRight"></div>
+				<div class="gridShadowBottomRight"></div>
+				<div class="gridShadowBottom"></div>
+				
+				<div class="mapCanvasBg" id="mapBg_b14055a4-b13f-4bc7-b96c-234e54b336c1"></div>
+				<div class="mapCanvasWrapShadowLeftTop"></div>
+				<div class="mapCanvasWrapShadowLeftBottom"></div>
+				<div class="mapWrap">
+					<div id="map_b14055a4-b13f-4bc7-b96c-234e54b336c1" class="map_canvas"></div>
+				</div>
+				<div class="mapCanvasFooter"><a href="javascript:;" onclick="gridHandler.zoomMap('b14055a4-b13f-4bc7-b96c-234e54b336c1');">Karte vergrößern</a></div>
+			</div>
+		<div class="gridShadowTopLeft"></div>
+		<div class="gridShadowTop"></div>
+		<div class="gridShadowLeft"></div>
+		<div class="gridShadowRight"></div>
+		<div class="gridShadowBottomLeft"></div>
+		<div class="gridShadowBottom"></div>
+		<div class="gridBg"></div>
+		<div class="gridContentArea" id="area_b14055a4-b13f-4bc7-b96c-234e54b336c1">
+			<div class="gridHeader">
+					<div class="alsoFound">
+					</div>
+				<h3 class="gridTitle">Ergebnis der Suche <span class="gridResultsNr">(6)</span></h3>
+				
+			</div>
+			<div class="gridRowsHolder">
+
+<div class="printinfo" style="display:none">
+	<img height="90" width="210" src="/101000/designs/notar_de/gfx/druck_logo.jpg">
+	<div class="infocontainer">
+		<h1 class="title">ERGEBNIS NOTARSUCHE</h1>
+		<p class="date">Dienstag, 20. September 2016, 15:42</p>
+	</div>
+</div>
+<img class="bgimg1" src="/101000/designs/notar_de/gfx/bgcol3.png" style="display:none" />
+
+<table class="gridRowsTable" onmouseout="gridHandler.restoreSelection('b14055a4-b13f-4bc7-b96c-234e54b336c1');">
+	<thead>
+		<tr>
+			<th class="columnLeft"></th>
+			<th class="columnName"><a class="sort desc" href="?sort=name&dir=desc" onclick="document.location.href = new urlParser('/seiten/suchergebnis?searchType=default&name=Aalen&active_search=notar&radius=Suchradius%20...&nrOnPage=2&page=2').setArgument('sort', 'name').setArgument('dir', 'desc').stringify(); return false;">Name</a></th>
+			<th class="columnAddr"><a class="sort " href="?sort=location&dir=" onclick="document.location.href = new urlParser('/seiten/suchergebnis?searchType=default&name=Aalen&active_search=notar&radius=Suchradius%20...&nrOnPage=2&page=2').setArgument('sort', 'location').setArgument('dir', '').stringify(); return false;">Anschrift</a></th>
+			<th class="columnPh">Telefon</th>
+			<th class="columnLng">Sprachen</th>
+			
+			<th class="columnRight"></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="dummyrow" style="display:none"><td colspan="4">&nbsp;</td></tr>
+		<tr class="printrow">
+			<td colspan="6" class="separatorTd">
+				<div>
+					<img class="bgimg3" src="/101000/designs/notar_de/gfx/bgcol2.png"  style="display:none" />
+				</div>
+			</td>
+		</tr>
+			<tr class="dataRow" onclick="gridHandler.select('b14055a4-b13f-4bc7-b96c-234e54b336c1', {elem: this}, true);" onmouseover="gridHandler.select('b14055a4-b13f-4bc7-b96c-234e54b336c1', {elem: this});" id="dataRow_b14055a4-b13f-4bc7-b96c-234e54b336c1_15684" >
+				<td class="columnLeft">
+					<script type="text/javascript">
+						var streetHsn = "Südlicher Stadtgraben 13";
+						if(streetHsn.lastIndexOf("-") > 0)
+							streetHsn = streetHsn.substring(0,streetHsn.lastIndexOf("-"));
+						var city = 'Aalen';
+							city = city.split(",")[0];
+						gridHandler.instances['b14055a4-b13f-4bc7-b96c-234e54b336c1'].records.push({elem: 'dataRow_b14055a4-b13f-4bc7-b96c-234e54b336c1_15684', data: { address: 'Deutschland, ' + city + ',' +  streetHsn + ', 73430', lat: '', lng: '', id: '15684', fields: {display_type: ''}}, selected: ''});
+					</script>
+				</td>
+					<td class="columnName"><div class="columnDataWrapper">Rechtsanwalt und Notar<br /> Hans-Jörg Korting</div></td>
+					<td class="columnAddr"><div class="columnDataWrapper">Südlicher Stadtgraben 13<br/>73430 Aalen</div></td>
+					<td class="columnPh"><div class="columnDataWrapper">07361/56950</div></td>
+					<td class="columnLng"><div class="columnDataWrapper">DE</div></td>
+					<td class="columnRight"></td>
+			</tr>
+				<tr class="printrow">
+					<td colspan="6" class="separatorTd"><div>
+							<img class="bgimg2 last" src="/101000/designs/notar_de/gfx/bgcol1.png" style="display:none" />
+					</div></td>
+				</tr>
+			<tr class="dataRow" onclick="gridHandler.select('b14055a4-b13f-4bc7-b96c-234e54b336c1', {elem: this}, true);" onmouseover="gridHandler.select('b14055a4-b13f-4bc7-b96c-234e54b336c1', {elem: this});" id="dataRow_b14055a4-b13f-4bc7-b96c-234e54b336c1_73794" >
+				<td class="columnLeft">
+					<script type="text/javascript">
+						var streetHsn = "Marktplatz 23";
+						if(streetHsn.lastIndexOf("-") > 0)
+							streetHsn = streetHsn.substring(0,streetHsn.lastIndexOf("-"));
+						var city = 'Aalen';
+							city = city.split(",")[0];
+						gridHandler.instances['b14055a4-b13f-4bc7-b96c-234e54b336c1'].records.push({elem: 'dataRow_b14055a4-b13f-4bc7-b96c-234e54b336c1_73794', data: { address: 'Deutschland, ' + city + ',' +  streetHsn + ', 73430', lat: '', lng: '', id: '73794', fields: {display_type: ''}}, selected: ''});
+					</script>
+				</td>
+					<td class="columnName"><div class="columnDataWrapper">Notarin im Landesdienst<br /> Andrea Kurz</div></td>
+					<td class="columnAddr"><div class="columnDataWrapper">Marktplatz 23<br/>73430 Aalen</div></td>
+					<td class="columnPh"><div class="columnDataWrapper"></div></td>
+					<td class="columnLng"><div class="columnDataWrapper">DE</div></td>
+					<td class="columnRight"></td>
+			</tr>
+	</tbody>
+</table>
+			</div>
+			<div class="gridFooter">
+					<div class="pageNumber">Seite 2 von 3</div>
+					<div class="pageNumberCorner"></div>
+					<div class="gridPager">
+						<div class="cornerLeft"></div>
+						<div class="pagerPanel">
+			<a class="buttonBack" href="#" onclick="return gridHandler.changeGridPage('b14055a4-b13f-4bc7-b96c-234e54b336c1', 1);"></a>
+		<table class="pagerTable">
+			<tbody>
+				<tr>
+									<td><a href="#" onclick="return gridHandler.changeGridPage('b14055a4-b13f-4bc7-b96c-234e54b336c1', 1);">1</a></td>
+									<td class="currentPage">2</td>
+									<td><a href="#" onclick="return gridHandler.changeGridPage('b14055a4-b13f-4bc7-b96c-234e54b336c1', 3);">3</a></td>
+				</tr>
+			</tbody>
+		</table>
+			<a class="buttonNext" href="#" onclick="return gridHandler.changeGridPage('b14055a4-b13f-4bc7-b96c-234e54b336c1', 3);"></a>
+						</div>
+						<div class="cornerRight"></div>
+					</div>
+					<div class="cornerLeft"></div>
+					<div class="gridPagesSelector">
+							<div class="pageSelectorBody" style="float: right; width: 54px; padding-top: 1px; margin-right: 5px;">
+								<div class="inputWrapper selectWrapper" style="height: 20px;">
+									<div class="inputSelect">
+										<span class="selectDisplay">2</span>
+										<div class="selectTrigger"></div>
+									</div>
+									<input type="hidden" name="itemsperpage" value="2" id="itemsperpage">
+									<div class="selectList" style="width: 48px;">
+										<div class="selectEntry default">
+											<div class="display">10</div>
+											<div class="value">10</div>
+										</div>
+										<div class="selectEntry">
+											<div class="display">20</div>
+											<div class="value">20</div>
+										</div>
+										<div class="selectEntry">
+											<div class="display">50</div>
+											<div class="value">50</div>
+										</div>
+										<div class="selectEntry">
+											<div class="display">100</div>
+											<div class="value">100</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						<div class="pageSelectorBody"><a class="gridprintbutton" href="javascript:void(0)" onclick="doPrintList();">Liste drucken</a></div>
+					</div>
+			</div>
+		</div>
+	</div>
+	<div id="detailsHolder_b14055a4-b13f-4bc7-b96c-234e54b336c1_wrap" class="detailsHolderWrap details_notar">
+		<div id="detailsHolder_b14055a4-b13f-4bc7-b96c-234e54b336c1_loading" class="loading_mask">
+			<div class="loading_icon"></div>
+		</div>
+			<div class="printinfo" style="display:none">
+				<img height="90" width="210" src="/101000/designs/notar_de/gfx/druck_logo.jpg">
+				<div class="infocontainer">
+						<h1 class="title">INFORMATIONEN ZUM NOTAR</h1>
+					<p class="date">Dienstag, 20. September 2016, 15:42</p>
+				</div>
+			</div>
+		<div id="detailsHolder_b14055a4-b13f-4bc7-b96c-234e54b336c1" class="detailsHolder"></div>
+	</div>
+	<script type="text/javascript">
+	function doPrintDetails(){
+		$("#detailsHolder_b14055a4-b13f-4bc7-b96c-234e54b336c1_wrap").removeClass("hideforprint");
+		$("#searchGrid_b14055a4-b13f-4bc7-b96c-234e54b336c1").addClass("hideforprint");
+		window.print();
+	}
+	function doPrintList(){
+		$("#detailsHolder_b14055a4-b13f-4bc7-b96c-234e54b336c1_wrap").addClass("hideforprint");
+		$("#searchGrid_b14055a4-b13f-4bc7-b96c-234e54b336c1").removeClass("hideforprint");
+		window.print();
+	}
+	$(document).ready(function(){
+		var dataRows = $('.gridRowsTable .dataRow');
+		if(dataRows.length == 1){
+			gridHandler.forceSelect('b14055a4-b13f-4bc7-b96c-234e54b336c1', {elem: dataRows.attr('id')}, true);
+		}
+		$('#itemsperpage').on("change", function(){
+			if($('#itemsperpage').val() != "2"){
+				var uri = document.location.href;
+				var paramArray = uri.split("&");
+				var newUri = "";
+				for(var i = 0; i < paramArray.length; i++){
+					if(paramArray[i].indexOf("page=") == -1 && paramArray[i].indexOf("nrOnPage=") == -1){
+						if(i != 0)
+							newUri += "&";
+						newUri += paramArray[i];
+					} 
+				}
+				newUri += "&page=1&nrOnPage=" + $('#itemsperpage').val();
+				document.location.href = newUri;
+			} 
+		});
+	});
+	</script>
+<div class="printinfo footercontainer" style="display:none">
+	<div class="leftcontainer">
+		<h4>QUELLE</h4>
+		<p>www.notar.de</p>
+		<h4>WEITERE INFORMATIONEN</h4>
+		<p>www.bnotk.de</p>
+	</div>
+	<div class="rightcontainer">
+		<h4>TELEFON</h4>
+		<p>+49 (0) 30 - 3838660</p>
+		<h4>TELEFAX</h4>
+		<p>+49 (0) 30 - 38386666</p>
+	</div>
+</div>					</div>
+				</div>
+<div id="footerBlock">
+	<div class="footerWrapper">
+		<div class="copyright">
+			&copy; 2015 notar.de&nbsp;&nbsp;|&nbsp;&nbsp;ein Service der Bundesnotarkammer
+		</div>
+		<div class="footerLinks">
+			<a href="http://notar.de/kontakt">Kontakt</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://notar.de/sitemap">Sitemap</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://notar.de/impressum">Impressum</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://notar.de/datenschutz">Datenschutz</a>
+		</div>
+		<div class="footerSearch">
+			<form id="footer_search_form" action="http://notar.de/suche">
+				<input name="singlewords" type="text" class="searchField" size="33" maxlength="33" value="Suche" onfocus="wcmsUtils.handleDefaultValue(this);" onblur="wcmsUtils.handleDefaultValue(this, true);"/>
+		        <input type="hidden" name="count" value="10"/>
+		        <input type="hidden" name="postback" value="true"/>
+		        <input type="hidden" name="allwords" value=""/>
+		        <input type="hidden" name="pageindex" value="0"/>
+		        <input type="hidden" name="action" value="search"/>
+		        <input type="hidden" name="pathInfo" value="suche"/>
+		        <input type="hidden" name="isHeadSearch" value="true"/>
+			</form>
+			<div class="searchSubmit" onclick="document.getElementById('footer_search_form').submit();"></div>
+		</div>
+	</div>
+</div>			</body>
+		</html>

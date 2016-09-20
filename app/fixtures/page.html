@@ -1,0 +1,229 @@
+
+	<div class="resultDetails">
+		<script type="text/javascript">
+			var streetHsn = "Marktplatz 23";
+			if(streetHsn.lastIndexOf("-") > 0)
+				streetHsn = streetHsn.substring(0,streetHsn.lastIndexOf("-"));
+			var city = 'Aalen';
+				city = city.split(",")[0];
+			var initialAddress = 'Deutschland, ' + city + ', ' + streetHsn + ', 73430';
+			
+			gridHandler.init('b14055a4-b13f-4bc7-b96c-234e54b336c1_details');
+			gridHandler.instances['b14055a4-b13f-4bc7-b96c-234e54b336c1_details'].records.push({data: { address: initialAddress, lat: '', lng: '',  id: '61207'}, selected: 'true'});
+			tabProcessor.init('b14055a4-b13f-4bc7-b96c-234e54b336c1_details', function(tab){
+				gridHandler.clearMap('b14055a4-b13f-4bc7-b96c-234e54b336c1_details');
+				gridHandler.displayMarkers('b14055a4-b13f-4bc7-b96c-234e54b336c1_details', tab.data || [{ address: initialAddress, lat: '', lng: '' }]);
+			});
+	    	$(document).ready(function(){
+				gridHandler.showMap('b14055a4-b13f-4bc7-b96c-234e54b336c1_details');
+			});
+	    </script>
+		<div class="mapCanvasWrap">
+				
+			<div class="gridShadowTop"></div>
+			<div class="gridShadowTopRight"></div>
+			<div class="gridShadowRight"></div>
+			<div class="gridShadowBottomRight"></div>
+			<div class="gridShadowBottom"></div>
+			
+			<div class="mapCanvasBg" id="mapBg_b14055a4-b13f-4bc7-b96c-234e54b336c1_details"></div>
+			<div class="mapCanvasWrapShadowLeftTop"></div>
+			<div class="mapCanvasWrapShadowLeftBottom"></div>
+			<div class="mapWrap">
+				<div id="map_b14055a4-b13f-4bc7-b96c-234e54b336c1_details" class="map_canvas"></div>
+			</div>
+			<div class="mapCanvasFooter"><a href="javascript:;" onclick="gridHandler.zoomMap('b14055a4-b13f-4bc7-b96c-234e54b336c1_details');">Karte vergrößern</a></div>
+		</div>
+		<div class="gridShadowTopLeft"></div>
+		<div class="gridShadowTop"></div>
+		<div class="gridShadowLeft"></div>
+		<div class="gridShadowRight"></div>
+		<div class="gridShadowBottomLeft"></div>
+		<div class="gridShadowBottom"></div>
+		<div class="gridBg"></div>
+		<div class="resultDetailsContentArea" id="area_b14055a4-b13f-4bc7-b96c-234e54b336c1_details">
+				<div class="resultDetailsHeader">
+					<div class="resultDetailsHeaderIcon">
+						<img src="/101000/designs/notar_de/gfx/bundesland/BW.jpg" border="0" />
+					</div>
+					<div class="resultDetailsHeaderBody">
+						<h3 class="resultDetailsHeaderTitle"> Andreas Richter</h3>
+						<h4 class="resultDetailsHeaderSubTitle">Notar im Landesdienst in Aalen • Justizverwaltung Baden-Württemberg</h4>
+					</div>
+				</div>
+				<div class="resultDetailsHolder" id="resultDetailsHolder_b14055a4-b13f-4bc7-b96c-234e54b336c1_details">
+						<div id="tabBody_notar_residence" class="tabBody">
+							<h2 class="onlyForPrinting">Amtssitz</h2>
+	<table class="resultDetailsTable">
+		<tbody>
+			<tr>
+				<td class="firstCell">
+						<h5>Adresse</h5>
+						<p>
+							Marktplatz 23<br />73430 Aalen
+						</p>
+						<h5>Telefon</h5>
+						<p>
+							07361/9653131
+						</p>
+				</td>
+				<td>
+						<h5>E-Mail</h5>
+						<p>
+							<a class="genericLink" href="mailto: andreas.richter@notaalen.justiz.bwl.de">andreas.richter@notaalen.justiz.bwl.de</a>
+						</p>
+				</td>
+				<td>
+						<h5>Beurkundungsprachen</h5>
+						<p>
+							Deutsch, Englisch
+						</p>
+						<h5>Entwurfssprachen</h5>
+						<p>
+							Deutsch
+						</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+										</div>
+						<div id="tabBody_notar_certificate" class="tabBody">
+							<h2 class="onlyForPrinting">Urkundenverwahrung</h2>
+	<table class="gridRowsTable certificateResultTable">
+		<thead>
+			<tr>
+				<th class="columnLeft"></th>
+				<th class="column1">Namen der Amtsvorgänger/innen</th>
+				<th class="column2">Aktenbeginn</th>
+				<th class="column3">Aktenende</th>
+				<th class="columnRight"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="dummyrow" style="display:none">
+				<td></td>
+				<td colspan="3">&nbsp;</td>
+				<td></td>
+			</tr>
+			<tr class="printrow">
+				<td></td>
+				<td colspan="3" class="separatorTd">
+					<div>
+						<img class="bgimg3" src="/101000/designs/notar_de/gfx/bgcol2.png"  style="display:none" />
+					</div>
+				</td>
+				<td></td>
+			</tr>
+				<tr class="">
+					<td class="columnLeft"></td>
+					<td class="column1"><div class="columnDataWrapper">Hubert Rasch, Notariat Aalen</div></td>
+					<td class="column2"><div class="columnDataWrapper">  	01.01.1988
+</div></td>
+					<td class="column3"><div class="columnDataWrapper">  	30.09.2012
+</div></td>
+					<td class="columnRight"></td>
+				</tr>
+					<tr class="printrow">
+					<td></td>
+					<td colspan="3" class="separatorTd"><div>
+							<img class="bgimg2 last" src="/101000/designs/notar_de/gfx/bgcol1.png" style="display:none" />
+					</div></td>
+					<td></td>
+				</tr>
+				<tr class="">
+					<td class="columnLeft"></td>
+					<td class="column1"><div class="columnDataWrapper">Landesnotariat Aalen, Notariat Aalen</div></td>
+					<td class="column2"><div class="columnDataWrapper">  	01.01.1951
+</div></td>
+					<td class="column3"><div class="columnDataWrapper">  	31.12.2011
+</div></td>
+					<td class="columnRight"></td>
+				</tr>
+		</tbody>
+	</table>
+						</div>
+						<div id="tabBody_notar_duties" class="tabBody">
+							<h2 class="onlyForPrinting">Frühere Amtstätigkeit</h2>
+	<table class="gridRowsTable dutiesResultTable">
+		<thead>
+			<tr>
+				<th class="columnLeft"></th>
+				<th class="column1">Frühere Amtstätigkeit</th>
+				<th class="column2">Beginn</th>
+				<th class="column3">Ende</th>
+				<th class="column4">Urkundenverwahrung</th>
+				<th class="columnRight"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="dummyrow" style="display:none"><td></td><td colspan="4">&nbsp;</td><td></td></tr>
+			<tr class="printrow">
+				<td></td>
+				<td colspan="4" class="separatorTd">
+					<div>
+						<img class="bgimg3" src="/101000/designs/notar_de/gfx/bgcol2.png"  style="display:none" />
+					</div>
+				</td>
+				<td></td>
+			</tr>
+				<tr class="dataRow" onclick="document.location.href='/suchergebnis?active_search=urkunden&certificate_id=20660';">
+					<td class="columnLeft"></td>
+					<td class="column1"><div class="columnDataWrapper">Andreas Richter, Notariat Neresheim</div></td>
+					<td class="column2"><div class="columnDataWrapper">  	01.06.2005
+</div></td>
+					<td class="column3"><div class="columnDataWrapper">  	14.07.2013
+</div></td>
+					<td class="column4"><div class="columnDataWrapper">Notariat Neresheim</div></td>
+					<td class="columnRight"></td>
+				</tr>
+		</tbody>
+	</table>
+	<script type="text/javascript">
+		$('.dutiesResultTable .dataRow').mouseover(function(){
+			$(this).addClass('activeRow');
+			if($(this).height() > 22) {
+				$(this).addClass('largeRow');
+			}
+		}).mouseout(function(){
+			$('.dutiesResultTable .dataRow').removeClass('activeRow');
+		});
+	</script>
+						</div>
+				</div>
+				<div class="resultDetailsFooter">
+					<div class="resultDetailsTabsPanel">
+				<div id="tabLinkWrap_notar_residence" class="tabLink">
+					<div class="buttonBody">
+						<div class="buttonLeft"></div>
+						<div class="buttonRight"></div>
+						<div class="buttonCenter" id="tabLink_notar_residence" title="Amtssitz">Amtssitz</div>
+					</div>
+				</div>
+				<script>
+					tabProcessor.addTab('b14055a4-b13f-4bc7-b96c-234e54b336c1_details', {linkWrap: 'tabLinkWrap_notar_residence', data: null, link: 'tabLink_notar_residence', body: 'tabBody_notar_residence', active: false});
+				</script>
+				<div id="tabLinkWrap_notar_certificate" class="tabLink">
+					<div class="buttonBody">
+						<div class="buttonLeft"></div>
+						<div class="buttonRight"></div>
+						<div class="buttonCenter" id="tabLink_notar_certificate" title="Urkundenverwahrung">Urkundenverwahrung</div>
+					</div>
+				</div>
+				<script>
+					tabProcessor.addTab('b14055a4-b13f-4bc7-b96c-234e54b336c1_details', {linkWrap: 'tabLinkWrap_notar_certificate', data: null, link: 'tabLink_notar_certificate', body: 'tabBody_notar_certificate', active: false});
+				</script>
+				<div id="tabLinkWrap_notar_duties" class="tabLink">
+					<div class="buttonBody">
+						<div class="buttonLeft"></div>
+						<div class="buttonRight"></div>
+						<div class="buttonCenter" id="tabLink_notar_duties" title="Frühere Amtstätigkeit">Frühere Amtstätigkeit</div>
+					</div>
+				</div>
+				<script>
+					tabProcessor.addTab('b14055a4-b13f-4bc7-b96c-234e54b336c1_details', {linkWrap: 'tabLinkWrap_notar_duties', data: null, link: 'tabLink_notar_duties', body: 'tabBody_notar_duties', active: false});
+				</script>
+					</div>
+					<a class="gridprintbutton" href="javascript:void(0)" onclick="doPrintDetails();">Informationen drucken</a>
+				</div>
+		</div>
+	</div>

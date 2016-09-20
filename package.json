@@ -1,0 +1,32 @@
+{
+  "name": "2016-09-20-notor",
+  "author": "Kyle Welsby <kyle@mekyle.com>",
+  "main": "app/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "DEBUG=* node app/index.js",
+    "lint": "standard app/*.js",
+    "test": "mocha --reporter spec 'app/*_test.js'"
+  },
+  "devDependencies": {
+    "JSONStream": "^1.1.4",
+    "cheerio": "^0.22.0",
+    "csv-write-stream": "^2.0.0",
+    "debug": "^2.2.0",
+    "mocha": "^3.0.2",
+    "mockery": "^1.7.0",
+    "request": "^2.75.0",
+    "request-promise": "^4.1.1",
+    "sanitize-filename": "^1.6.0",
+    "standard": "^8.1.0"
+  },
+  "standard": {
+    "globals": [
+      "before",
+      "after",
+      "it",
+      "describe"
+    ]
+  },
+  "version": "0.0.1"
+}
