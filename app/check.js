@@ -13,14 +13,20 @@ function handleResponse (content) {
   return ids
 }
 
-function processResults (ids, query, writers) {
+function processResults (ids) {
+  if (ids.length === 0) {
+    throw new Error('No ids found')
+  }
   return Bluebird.map(ids, function (id) {
-    return Directory(id, query, writers)
-  }, {concurrency: 1})
+    return Directory(id, this.inputQuery, this.writers)
+  }.bind(this), {concurrency: 1})
 }
 
 function Check (query, writers) {
-  this.query = query
+  if (!query) {
+    throw new Error('No input query')
+  }
+  this.inputQuery = query
   this.writers = writers
   return request({
     url: 'http://www.notar.de/index.html?type=landregistry_landregistry&ajax=true&ajaxtype=autocomplete_service',
@@ -32,8 +38,6 @@ function Check (query, writers) {
     }
   })
     .then(handleResponse)
-    .then(function (ids) {
-      return processResults(ids, query, writers)
-    })
+    .then(processResults.bind(this))
 }
 module.exports = Check

@@ -7,9 +7,7 @@ const path = require('path')
 const url = require('url')
 const csvWriter = require('csv-write-stream')
 const JSONStream = require('JSONStream')
-const readline = require('readline')
 
-var requestCount = 0
 function requestMock (options) {
   let body = null
   let theUrl = url.parse(options.url, true)
@@ -22,7 +20,6 @@ function requestMock (options) {
     body = fs.readFileSync(path.resolve(__dirname, 'fixtures/check.html'), 'utf8')
   }
   let response = cheerio.load(body)
-  requestCount++
   return Bluebird.resolve(response)
 }
 
@@ -94,16 +91,16 @@ describe('Directory', function () {
       })
       setTimeout(function () {
         let data = require('../data/_master.json')
-        item = data[0]
+        let item = data[0]
         assert.equal(item['GRUNDBUCHAMT'], 'Grundbuchamt Backnang')
         assert.equal(item['GEMARKUNG'], 'Allmersbach - 1215')
         assert.equal(item['GRUNDBUCHBEZIRK'], 'Allmersbach - 081215')
         assert.equal(item['ORT'], 'Aspach')
         assert.equal(item['ZUSTDG. AB'], '01.01.1900')
         assert.equal(item['ZUSTDG. BIS'], '11.12.2016')
-        assert.equal(data.length, 12)
+        assert.equal(data.length, 14)
         countFileLines('../data/_master.csv', function (count) {
-          assert.equal(count, 13) // includes header
+          assert.equal(count, 15) // includes header
           done()
         })
       }, 10)

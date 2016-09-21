@@ -28,7 +28,8 @@ function handleResponse ($) {
     results.push(data)
   })
   var nextPageNumber = null
-  if ($('.buttonNext').prop('href')) {
+  if ($('.buttonNext').length) {
+    debug('Has more pages')
     var theUrl = url.parse(this.inputUrl, true)
 
     nextPageNumber = parseInt(theUrl.query.page, 10) || 1
@@ -42,26 +43,34 @@ function handleResponse ($) {
 
 function paginate (response) {
   if (response.nextPageNumber) {
-    if (handledPages.indexOf(response.nextpages) === -1) {
-      debug('Paginating')
-      handledPages.push(response.nextPageUrl)
-      return Directory(this.id, this.query, this.writers, response.nextPageNumber)
-    }
+    debug('Paginating', this.id, this.query, response.nextPageNumber)
+    handledPages.push(response.nextPageUrl)
+    return Directory(this.id, this.query, this.writers, response.nextPageNumber)
   }
   return response
 }
 
 function Directory (id, query, writers, page) {
+  if (!id) {
+    throw new Error('Missing ID')
+  }
+  if (!query) {
+    throw new Error('Missing Query')
+  }
   if (!page) {
     page = 1
   }
+
   util.incMetadata('pages')
   this.id = id
   this.writers = writers
   this.query = query
-  this.inputUrl = `http://www.notar.de/suchergebnis?notprospective=true&active_search=grundbuch&landregistry_id=${id}&page=${page}`
   this.writers = writers
-  debug('Loading Directory', query, id, this.inputUrl)
+  this.inputUrl = `http://www.notar.de/suchergebnis?notprospective=true&active_search=grundbuch&landregistry_id=${id}&page=${page}`
+  if (handledPages.indexOf(this.inputUrl) !== -1) {
+    throw new Error('Page already handled')
+  }
+  debug('Loading Directory', this.query, this.id, this.inputUrl)
 
   return request({
     url: this.inputUrl

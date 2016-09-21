@@ -17,7 +17,12 @@ util.setup(function () {
   writers.csv.pipe(fs.createWriteStream(path.resolve(__dirname, '../data/_master.csv')))
 
   Bluebird.map(INPUT, function (item) {
-    return Check(item, writers)
+    if (item) {
+      return Check(item, writers).catch(function (error) {
+        console.error(error)
+        util.incMetadata('Skipped')
+      })
+    }
   }, {concurrency: 1}).then(function () {
     Object.keys(writers).forEach(function (key) {
       writers[key].end()
