@@ -6,7 +6,7 @@ const csvWriter = require('csv-write-stream')
 const JSONStream = require('JSONStream')
 const Bluebird = require('bluebird')
 
-const INPUT = fs.readFileSync(path.resolve(__dirname, '../input.txt'), {encoding: 'utf8'}).split('\n')
+const INPUT = fs.readFileSync(path.resolve(__dirname, '../input.txt'), {encoding: 'utf8'}).split('\n').sort()
 
 util.setup(function () {
   let writers = {}
@@ -22,6 +22,7 @@ util.setup(function () {
     if (item) {
       return Check(item, writers).catch(function (error) {
         console.error(error)
+        fs.appendFileSync(path.resolve(__dirname, '../data/error.log'), error + '\n')
         util.incMetadata('Skipped')
       })
     }

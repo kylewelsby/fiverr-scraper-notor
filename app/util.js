@@ -38,6 +38,9 @@ module.exports.setup = function (cb) {
   try {
     fs.unlinkSync(path.resolve(__dirname, '../data/_master.json'), '')
   } catch (e) {}
+  try {
+    fs.unlinkSync(path.resolve(__dirname, '../data/error.log'), '')
+  } catch (e) {}
   fs.writeFileSync(metadataFile, '{}')
 
   setMetadata('startAt', new Date())
