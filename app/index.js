@@ -15,8 +15,10 @@ util.setup(function () {
   writers.json = JSONStream.stringify()
   writers.json.pipe(fs.createWriteStream(path.resolve(__dirname, '../data/_master.json')))
   writers.csv.pipe(fs.createWriteStream(path.resolve(__dirname, '../data/_master.csv')))
-
+  var counter = 0
   Bluebird.map(INPUT, function (item) {
+    util.setMetadata('progress', (counter / INPUT.length).toFixed(2) + '%')
+    counter++
     if (item) {
       return Check(item, writers).catch(function (error) {
         console.error(error)
