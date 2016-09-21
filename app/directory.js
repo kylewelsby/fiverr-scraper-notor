@@ -45,7 +45,7 @@ function paginate (response) {
   if (response.nextPageNumber) {
     debug('Paginating', this.id, this.query, response.nextPageNumber)
     handledPages.push(response.nextPageUrl)
-    return Directory(this.id, this.query, this.writers, response.nextPageNumber)
+    return new Directory(this.id, this.query, this.writers, response.nextPageNumber)
   }
   return response
 }

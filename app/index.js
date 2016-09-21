@@ -20,13 +20,13 @@ util.setup(function () {
     util.setMetadata('progress', (counter / INPUT.length).toFixed(2) + '%')
     counter++
     if (item) {
-      return Check(item, writers).catch(function (error) {
+      return new Check(item, writers).catch(function (error) {
         console.error(error)
         fs.appendFileSync(path.resolve(__dirname, '../data/error.log'), error + '\n')
         util.incMetadata('Skipped')
       })
     }
-  }, {concurrency: 1}).then(function () {
+  }, {concurrency: 2}).then(function () {
     Object.keys(writers).forEach(function (key) {
       writers[key].end()
     })

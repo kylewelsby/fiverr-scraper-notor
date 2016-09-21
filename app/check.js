@@ -18,8 +18,8 @@ function processResults (ids) {
     throw new Error('No ids found for ' + this.inputQuery)
   }
   return Bluebird.map(ids, function (id) {
-    return Directory(id, this.inputQuery, this.writers)
-  }.bind(this), {concurrency: 1})
+    return new Directory(id, this.inputQuery, this.writers)
+  }.bind(this), {concurrency: 2})
 }
 
 function Check (query, writers) {
